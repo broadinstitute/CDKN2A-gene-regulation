@@ -34,6 +34,9 @@ there are the same number guides per target for negative controls and candidates
 The other screen scripts were used to produce plots that we looked at over the course of the
 project and are included in case we want to use them in the future.
 
+Finally [screen_alignment.sh](screen_alignment.sh) details the STAR solo alignment calls for the 
+screen mRNA and dialup; the same parameters were used for the Henrickson dialup.
+
 ## Micro-C
 There are two scripts associated with the Micro-C. [microC_juicer_commands.sh](microC_juicer_commands.sh)
 gives some example commands to create the hic files, call loops, and call differential loops
