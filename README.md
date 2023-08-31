@@ -6,7 +6,7 @@ regulation project. There are three main branches of analysis:
 - [Confluence multiome single cell experiment](Confluence)
 
 ## Screen
-The main scripts associated with the screen involve running [Sceptre](https://katsevich-lab.github.io/sceptre/index.html)
+The main scripts associated with the screen involve running [Sceptre](https://katsevich-lab.github.io/sceptre/index.html). 
 The initial processing is accomplished via [screen_processing.R](screen_processing.R), which
 creates the rds object by reading and processing the mRNA alignment folders and the CROP alignment folders.
 The version of Sceptre we have working, [screen_sceptre_original.R](screen_sceptre_original.R), 
