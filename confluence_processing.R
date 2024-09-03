@@ -31,23 +31,19 @@ Multiome.rna@meta.data <- Multiome.rna@meta.data %>%
         dplyr::rename(nUMI = nCount_RNA,
                       nGene = nFeature_RNA)
 
-ttt<-Multiome.rna@meta.data
-ttt<-left_join(ttt, all_atac, by="cells")
-all_atac<-read.table("ppp", header=TRUE)
-all_atac$cells <- all_atac$cell
-all_atac$cell <- NULL
-ttt<-left_join(ttt, all_atac, by="cells")
-mytable2 <- read.table("all-p16-p14-Broad-dialout.tsv", head = TRUE)
-ttt<-left_join(ttt, mytable2, by="cells")
-Multiome.rna@meta.data$TSS<-ttt$TSS
-Multiome.rna@meta.data$nFrags<-ttt$nFrags
-Multiome.rna@meta.data$p16.dialout<-ttt$p16.dialout
-Multiome.rna@meta.data$p14.dialout<-ttt$p14.dialout
-Multiome.rna@meta.data$ANRIL_short.dialout<-ttt$ANRIL_short
-Multiome.rna@meta.data$ANRIL_long.dialout<-ttt$ANRIL_long
+# ATAC processed by ArchR - possibly/probably abandoned for cellranger
+#ttt<-left_join(ttt, mytable2, by="cells")
+#Multiome.rna@meta.data$TSS<-ttt$TSS
+#Multiome.rna@meta.data$nFrags<-ttt$nFrags
+#Multiome.rna@meta.data$p16.dialout<-ttt$p16.dialout
+#Multiome.rna@meta.data$p14.dialout<-ttt$p14.dialout
+#Multiome.rna@meta.data$ANRIL_short.dialout<-ttt$ANRIL_short
+#Multiome.rna@meta.data$ANRIL_long.dialout<-ttt$ANRIL_long
 
-
+# I believe these are final QCs
+# cell names are in data/confluence_cellnames_final_good_set_atac_rna.tsv
 Multiome.rna <- subset(Multiome.rna, subset = nUMI >= 1000 & TSS >= 4 & nFrags >= 300 & nGene >=500 & percent.mt <=30)
+
 
 # Visualize the number UMIs/transcripts per cell
 pdf("Multiome.rna_UMIs_per_cell.pdf", height = 6, width = 9)
@@ -152,9 +148,6 @@ Multiome.rna <- FindClusters(Multiome.rna, resolution=0.3)
 pdf("Multiome.rna_UMAP_Clusters.pdf", height = 6, width = 7)
 DimPlot(Multiome.rna, reduction="umap")
 dev.off()
-#pdf("Multiome.rna_UMAP_Samples.pdf", height = 6, width = 7)
-#DimPlot(Multiome.rna, reduction="umap", group.by = "Timepoints", cols=c("pink", "goldenrod3", "limegreen", "deepskyblue2"))
-#dev.off()
 
 FeaturePlot(Multiome.rna, features = "MKI67")
 s_genes = readLines("g1-s-cycling")
@@ -169,6 +162,7 @@ FeaturePlot(Multiome.rna, features = "percent.mt")
 #write.table(t(as.matrix(mytable)), "all-p16-p14-Broad-dialout.tsv")
 ### EDIT THE HEADER TO BE cells p16.dialout p14.dialout 
 ### or ANRIL.short.dialout ANRIL.long.dialout
+### this below file in gs://broad-p16-calico/confluence_multiome
 mytable2 <- read.table("all-p16-p14-Broad-dialout.tsv", head=TRUE)
 metadata <- left_join(Multiome.rna@meta.data, mytable2, by = "cells")
 Multiome.rna@meta.data$p16.dialout <- metadata$p16.dialout
@@ -188,11 +182,7 @@ p16.gene<-unlist(p16.gene)
 archr$p16.gene<-p16.gene
 getGroupBW(archr, groupBy = "p16.gene")
 
-
-
-
-
-
+### Trying to do something with clusters, don't think anything came of this
 cluster0.markers <- FindMarkers(Multiome.rna, ident.1 = 0, min.pct = 0.25)
 cluster1.markers <- FindMarkers(Multiome.rna, ident.1 = 1, min.pct = 0.25)
 cluster2.markers <- FindMarkers(Multiome.rna, ident.1 = 2, min.pct = 0.25)
@@ -229,6 +219,8 @@ df <- data.frame(id, p14.avg.by.cluster, p16.avg.by.cluster, umis.avg.by.cluster
 ggplot(df, aes(x=p16.avg.by.cluster, y=umis.avg.by.cluster)) + geom_point() + geom_text(label=id,hjust=0, vjust=2)
 ggplot(df, aes(x=p14.avg.by.cluster, y=umis.avg.by.cluster)) + geom_point() + geom_text(label=id,hjust=0, vjust=2)
 
+
+### Trying to figure out normalization by looking at nUMI vs dialup
 numis <- Multiome.rna@meta.data$nUMI
 p16 <- Multiome.rna@meta.data$p16.dialout
 p14 <- Multiome.rna@meta.data$p14.dialout
@@ -242,7 +234,7 @@ ggplot(df3,aes(x=p16, y=numis))+geom_jitter(alpha=0.3)
 ggplot(df3,aes(x=p16, y=numis))+geom_jitter(alpha=0.5) + geom_label(label="corr=0.312631", x=15,y=20000)
 ggplot(df3,aes(x=p14, y=numis))+geom_jitter(alpha=0.5) + geom_label(label="corr=0.463566", x=20,y=20000)
 
-
+### Processing dialout for Henrickson Hayflick paper; not about confluence
 dialout.pdl50<-Read10X("hayflick_paper_dialout_all/Calico_PDL_50Solo.out/Gene/raw/")
 dialout.pdl50<-Read10X("hayflick_paper_dialout_all/Calico_PDL_50Solo.out/Gene/raw/")
 dialout.pdl25<-Read10X("hayflick_paper_dialout_all/Calico_PDL_25Solo.out/Gene/raw/")
@@ -336,7 +328,8 @@ Hayflick@meta.data$p14.norm[inds5] <- Hayflick@meta.data$p14.dialout.pdl46[inds5
 numis=Hayflick@meta.data$nCount_RNA[inds6]
 Hayflick@meta.data$p14.norm[inds6] <- Hayflick@meta.data$p14.dialout.pdl50[inds6]/numis
 
-
+## This isn't a file we use anymore
+## I was trying to make a kind of pileup graph/matrix of the atac and p16
 atac.multiome<-read.table("cellranger_atac/atac_fragments_p16.tsv")
 
 tmptable<-Multiome.rna@meta.data
@@ -407,9 +400,13 @@ y.lab<-c(0,0,round(vals[301],4),round(vals[201],4),round(vals[101],4), round(val
 y.lab<-c("p14","p16")
 axis(2, at=seq(0.5,1,0.5), labels=y.lab)
 
+###
+### This is our plot showing an implied inverse relationship between p14 and p16
 ggplot(df3, mapping = aes(x=Multiome.rna.p16.norm, y=Multiome.rna.p14.norm, color= I(ifelse(Multiome.rna.p14.norm<=0.0025 &Multiome.rna.p16.norm <= 0.0025, 'black', 'red'))))+geom_point()+xlim(0,0.025)+ylim(0,0.025)+geom_hline(yintercept=0.0025, linetype="dashed", color = "blue", size=0.5)+geom_vline(xintercept=0.0025, linetype="dashed", color = "blue", size=0.5)+xlab("p16 dialout umis / total umis") + ylab("p14 dialout umis / total umis") + ggtitle("Wi38 confluence p14 and p16 per single cell")
 ggplot(df2, mapping = aes(x=Hayflick.p16.norm, y=Hayflick.p14.norm, color=I(ifelse(Hayflick.p16.norm<=0.0005 & Hayflick.p14.norm<=0.0005, 'black', 'red'))))+geom_point()+ylim(0,0.0035)+geom_hline(yintercept=0.0005, linetype="dashed", color = "blue", size=0.5)+geom_vline(xintercept=0.0005, linetype="dashed", color = "blue", size=0.5)+xlab("p16 dialout umis / total umis") + ylab("p14 dialout umis / total umis") + ggtitle("Wi38 senescence all PDLs per single cell")
 
+
+## This is coloring the Henrickson/Hayflick paper data by p16/p14
 # possibly didn't need to make this separate object
 obj<-Hayflick
 Idents(object=obj) <- "sample"
@@ -422,55 +419,6 @@ p2 <- lapply(p1, function (x) x + fix.sc)
 CombinePlots(p2)
 
 
-########## Perform DGE and ROC analyses #############
-#DefaultAssay(Multiome.rna) <- "RNA"
-
-#Reprogramming.rna <- NormalizeData(Reprogramming.rna)
-#all.genes <- rownames(Reprogramming.rna)
-#Reprogramming.rna <- ScaleData(Reprogramming.rna, vars.to.regress = "percent.mt", features = all.genes)
-#Reprogramming.rna.markers <- FindAllMarkers(Reprogramming.rna, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25, test.use = "roc")
-#write.table(Reprogramming.rna.markers, file="Reprogramming.rna_Markers_AUC.txt", sep="\t", quote=FALSE, col.names=NA)
-#Reprogramming.rna.markers.DGE <- FindAllMarkers(Reprogramming.rna, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25)
-#write.table(Reprogramming.rna.markers.DGE, file="Reprogramming.rna_Markers_DGE.txt", sep="\t", quote=FALSE, col.names=NA)
-#write.table(Reprogramming.rna@meta.data, file="Reprogramming.rna_MetaData.txt", sep="\t", col.names=NA, quote=FALSE)
-
-
-# p16.umi.per.million.0 <-Multiome.rna@meta.data$p16.dialout[cl0]*1000000/Multiome.rna@meta.data$nUMI[cl0]
-# p16.umi.per.million.1 <-Multiome.rna@meta.data$p16.dialout[cl1]*1000000/Multiome.rna@meta.data$nUMI[cl1]
-# p16.umi.per.million.2 <-Multiome.rna@meta.data$p16.dialout[cl2]*1000000/Multiome.rna@meta.data$nUMI[cl2]
-# p16.umi.per.million.3 <-Multiome.rna@meta.data$p16.dialout[cl3]*1000000/Multiome.rna@meta.data$nUMI[cl3]
-# p16.umi.per.million.4 <-Multiome.rna@meta.data$p16.dialout[cl4]*1000000/Multiome.rna@meta.data$nUMI[cl4]
-# p16.umi.per.million.5 <-Multiome.rna@meta.data$p16.dialout[cl5]*1000000/Multiome.rna@meta.data$nUMI[cl5]
-# p16.umi.per.million <- c(mean(p16.umi.per.million.0),mean(p16.umi.per.million.1),mean(p16.umi.per.million.2),mean(p16.umi.per.million.3),mean(p16.umi.per.million.4),mean(p16.umi.per.million.5))
-# p14.umi.per.million.0 <-Multiome.rna@meta.data$p14.dialout[cl0]*1000000/Multiome.rna@meta.data$nUMI[cl0]
-# p14.umi.per.million.1 <-Multiome.rna@meta.data$p14.dialout[cl1]*1000000/Multiome.rna@meta.data$nUMI[cl1]
-# p14.umi.per.million.2 <-Multiome.rna@meta.data$p14.dialout[cl2]*1000000/Multiome.rna@meta.data$nUMI[cl2]
-# p14.umi.per.million.3 <-Multiome.rna@meta.data$p14.dialout[cl3]*1000000/Multiome.rna@meta.data$nUMI[cl3]
-# p14.umi.per.million.4 <-Multiome.rna@meta.data$p14.dialout[cl4]*1000000/Multiome.rna@meta.data$nUMI[cl4]
-# p14.umi.per.million.5 <-Multiome.rna@meta.data$p14.dialout[cl5]*1000000/Multiome.rna@meta.data$nUMI[cl5]
-# p14.umi.per.million <- c(mean(p14.umi.per.million.0),mean(p14.umi.per.million.1),mean(p14.umi.per.million.2),mean(p14.umi.per.million.3),mean(p14.umi.per.million.4),mean(p14.umi.per.million.5))
-
-# p14 0.00015 .0003  0.0006 0.00095
-# p16 0.0001 0.0005
-# i0 <- (Multiome.rna$p14.norm == 0 )
-# i1 <- (Multiome.rna$p14.norm <=0.00015 & Multiome.rna$p14.norm > 0)
-# i2 <- (Multiome.rna$p14.norm >0.00015 & Multiome.rna$p14.norm <0.0003)
-# i3 <- (Multiome.rna$p14.norm >=0.0003 & Multiome.rna$p14.norm <.0006)
-# i4 <- (Multiome.rna$p14.norm >=0.0006 & Multiome.rna$p14.norm <0.00095)
-# i5 <- (Multiome.rna$p14.norm >=0.00095)
-# 
-# j0 <- (Multiome.rna$p16.norm == 0 )
-# j1 <- (Multiome.rna$p16.norm <=0.0001 & Multiome.rna$p16.norm>0)
-# j2 <- (Multiome.rna$p16.norm >0.0001 & Multiome.rna$p16.norm <0.0005)
-# j3 <- (Multiome.rna$p16.norm >=0.0005 )
-# 
-# row1 <- c(sum(i0&j0),sum(i0&j1),sum(i0&j2), sum(i0&j3))
-# row2 <- c(sum(i1&j0),sum(i1&j1),sum(i1&j2), sum(i1&j3))
-# row3 <- c(sum(i2&j0),sum(i2&j1),sum(i2&j2), sum(i2&j3))
-# row4 <- c(sum(i3&j0),sum(i3&j1),sum(i3&j2), sum(i3&j3))
-# row5 <- c(sum(i4&j0),sum(i4&j1),sum(i4&j2), sum(i4&j3))
-# row6 <- c(sum(i5&j0),sum(i5&j1),sum(i5&j2), sum(i5&j3))
-
 pdls <- c(rep("PDL 25" , 2) , rep("PDL 29" , 2) , rep("PDL 33" , 2) , rep("PDL 37" , 2), rep("PDL 46", 2), rep("PDL 50", 2) )
 expression <- rep(c("p14 dialout" , "p16 dialout") , 6)
 values<-c(sum(Hayflick$p14.dialout.pdl25[inds1]/Hayflick$nCount_RNA[inds1]),sum(Hayflick$p16.dialout.pdl25[inds1]/Hayflick$nCount_RNA[inds1]), sum(Hayflick$p14.dialout.pdl29[inds2]/Hayflick$nCount_RNA[inds2]), sum(Hayflick$p16.dialout.pdl29[inds2]/Hayflick$nCount_RNA[inds2]), sum(Hayflick$p14.dialout.pdl33[inds3]/Hayflick$nCount_RNA[inds3]), sum(Hayflick$p16.dialout.pdl33[inds3]/Hayflick$nCount_RNA[inds3]), sum(Hayflick$p14.dialout.pdl37[inds4]/Hayflick$nCount_RNA[inds4]), sum(Hayflick$p16.dialout.pdl37[inds4]/Hayflick$nCount_RNA[inds4]), sum(Hayflick$p14.dialout.pdl46[inds5]/Hayflick$nCount_RNA[inds5]), sum(Hayflick$p16.dialout.pdl46[inds5]/Hayflick$nCount_RNA[inds5]), sum(Hayflick$p14.dialout.pdl50[inds6]/Hayflick$nCount_RNA[inds6]), sum(Hayflick$p16.dialout.pdl50[inds6]/Hayflick$nCount_RNA[inds6]))
@@ -478,7 +426,7 @@ databr <- data.frame(pdls,expression,values)
 ggplot(databr, aes(fill=expression, y=values, x=pdls)) +  geom_bar(position="dodge", stat="identity")+ xlab("Time points")+ylab("Sum Normalized UMIs")+scale_fill_manual(values = c("#054C70","#05C3DE")) +theme(legend.position="top",legend.title =
 element_blank())
 
-
+## Showing senenscence score by quantile in confluence
 quants<-quantile(Multiome.rna$p16NormHayTop1, c(.25, .50, .75))
 Multiome.rna$senscore.16.class<-"none"
 Multiome.rna$senscore.16.class[which(Multiome.rna$p16NormHayTop1<=quants[1])]<-"least25"
@@ -488,6 +436,14 @@ Multiome.rna$senscore.14.class<-"none"
 Multiome.rna$senscore.14.class[which(Multiome.rna$p14NormHayTop1<=quants[1])]<-"least25"
 Multiome.rna$senscore.14.class[which(Multiome.rna$p14NormHayTop1>=quants[3])]<-"top25"
 DimPlot(Multiome.rna,group.by = "senscore.14.class")
+
+###
+### This looks like it could be the correlation code, these archr-order files will live in data/
+### The "getGroupBW" is to try and create a track, I believe unsuccessfully (didn't look good)
+### That function comes from ArchR
+
+### "ordering" files are saved to the Google bucket
+### These were used to color the ATAC UMAP by their p16 or p14 associated score
 df<-data.frame(Multiome.rna@meta.data$senscore.14.class, Multiome.rna@meta.data$cnarchr)
 write.table(df, "ordering14", row.names=FALSE, col.names=FALSE)
 # edit via awk code: 
