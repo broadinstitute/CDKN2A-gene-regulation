@@ -5,8 +5,34 @@ library(Matrix)
 library(Seurat)
 library(sceptre)
 library(ggpubr)
+my_combine_perturbations <- function(perturbation_matrix, gRNA_groups_table) {
+    if (!all(c("gRNA_id", "gRNA_group") %in% colnames(gRNA_groups_table))) {
+        stop("`gRNA_id` and `gRNA_group` should be columns of `gRNA_groups`.")
+    }
+    gRNA_groups <- as.character(unique(gRNA_groups_table$gRNA_group))
+    gRNA_groups <- stats::setNames(gRNA_groups, gRNA_groups)
+    gRNA_grp_list <- lapply(X = gRNA_groups, FUN = function(gRNA_group) {
+        dplyr::pull(dplyr::filter(gRNA_groups_table, gRNA_group == 
+            !!gRNA_group), gRNA_id)
+    })
+    leftover_gRNAs <- setdiff(row.names(perturbation_matrix), 
+        unlist(gRNA_grp_list))
+    out_leftover <- perturbation_matrix[leftover_gRNAs, ]
+    out_grped <- Matrix::t(sapply(X = names(gRNA_grp_list), FUN = function(grp_name) {
+        mat_sub <- perturbation_matrix[gRNA_grp_list[[grp_name]], 
+            , drop = FALSE]
+        Matrix::colSums(mat_sub)
+    }))
+    out_grped <- out_grped >= 1
+    if (length(leftover_gRNAs) == 0) {
+       out <- out_grped
+    } else {
+       out_leftover <- perturbation_matrix[leftover_gRNAs, ]
+       out <- rbind(out_leftover, out_grped)
+    }
+}
 
-outname <- "sceptre_guides_nG50_no_gRNA_new_ref"
+outname <- "sceptre_guides_nG50_new_ref_anril_guide"
 
 screen.rna <- readRDS("screen.rna.rds")
 gene_matrix <- GetAssayData(screen.rna, slot = "counts")
@@ -27,7 +53,7 @@ binary_gRNA_matrix <- ifelse(gRNA_matrix >= 10, 1, 0)
 # might be good to add the number of nonzero entires per cell
 # for both genes and gRNAs
 covariate_data_frame <- data.frame(lg_gene_lib_size = lg_gene_lib_size, 
-                                   #lg_gRNA_lib_size = lg_gRNA_lib_size, 
+                                   lg_gRNA_lib_size = lg_gRNA_lib_size, 
                                    #lg_dialup_lib_size = lg_dialup_lib_size, 
                                    lg_crop_numi = lg_crop_numi, 
                                    num_guides = colSums(binary_gRNA_matrix),
@@ -48,11 +74,11 @@ covariate_matrix <- covariate_matrix[common_barcodes, ]
 perturbation_matrix <- threshold_gRNA_matrix(gRNA_matrix,10)
 
 # This is only used when running in target mode
-gRNA_groups_table <- read.table("data/gRNAs_targets.tsv", head=TRUE, sep="\t")
-combined_perturbation_matrix <- combine_perturbations(perturbation_matrix = perturbation_matrix,
-                                                      gRNA_groups_table = gRNA_groups_table)
+#gRNA_groups_table <- read.table("data/gRNAs_targets.tsv", head=TRUE, sep="\t")
+#combined_perturbation_matrix <- combine_perturbations(perturbation_matrix = perturbation_matrix,
+#                                                      gRNA_groups_table = gRNA_groups_table)
 # If running in target mode, use "data/genes_gRNAs_targets.tsv", else use "data/genes_gRNAs_guides.tsv"
-gene_gRNA_group_pairs <- read.table("data/genes_gRNAs_targets.tsv", head=TRUE, sep="\t")
+gene_gRNA_group_pairs <- read.table("data/genes_gRNAs_guides_ANRIL.tsv", head=TRUE, sep="\t")
 side <- "both"
 
 # "full" because we ask for full_output, thus far this has not been useful
