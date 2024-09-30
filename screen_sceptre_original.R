@@ -135,7 +135,7 @@ discovery_set <- discovery_set %>% mutate(num_str = sapply(strsplit(as.character
 # this is for guide mode, where we want to use the cut site
 #discovery_set <- discovery_set %>% mutate(cut_site = sapply(strsplit(as.character(gRNA_id), "_"), `[`, 3),
 #                                          bedgraph_num1 = as.numeric(sapply(strsplit(cut_site, "\\."), `[`, 1))-5,
-#                                          bedgraph_num2 = num1+10)
+#                                          bedgraph_num2 = bedgraph_num1+10)
 
 
 
