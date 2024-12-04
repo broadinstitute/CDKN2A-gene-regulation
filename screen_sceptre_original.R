@@ -5,32 +5,6 @@ library(Matrix)
 library(Seurat)
 library(sceptre)
 library(ggpubr)
-my_combine_perturbations <- function(perturbation_matrix, gRNA_groups_table) {
-    if (!all(c("gRNA_id", "gRNA_group") %in% colnames(gRNA_groups_table))) {
-        stop("`gRNA_id` and `gRNA_group` should be columns of `gRNA_groups`.")
-    }
-    gRNA_groups <- as.character(unique(gRNA_groups_table$gRNA_group))
-    gRNA_groups <- stats::setNames(gRNA_groups, gRNA_groups)
-    gRNA_grp_list <- lapply(X = gRNA_groups, FUN = function(gRNA_group) {
-        dplyr::pull(dplyr::filter(gRNA_groups_table, gRNA_group == 
-            !!gRNA_group), gRNA_id)
-    })
-    leftover_gRNAs <- setdiff(row.names(perturbation_matrix), 
-        unlist(gRNA_grp_list))
-    out_leftover <- perturbation_matrix[leftover_gRNAs, ]
-    out_grped <- Matrix::t(sapply(X = names(gRNA_grp_list), FUN = function(grp_name) {
-        mat_sub <- perturbation_matrix[gRNA_grp_list[[grp_name]], 
-            , drop = FALSE]
-        Matrix::colSums(mat_sub)
-    }))
-    out_grped <- out_grped >= 1
-    if (length(leftover_gRNAs) == 0) {
-       out <- out_grped
-    } else {
-       out_leftover <- perturbation_matrix[leftover_gRNAs, ]
-       out <- rbind(out_leftover, out_grped)
-    }
-}
 
 outname <- "sceptre_guides_nG50_new_ref_anril_guide"
 
