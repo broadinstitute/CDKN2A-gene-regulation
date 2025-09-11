@@ -1,0 +1,158 @@
+library(ComplexHeatmap)
+library(dplyr)
+library(readxl)
+library(circlize)
+library("stats")
+library(tidyr)
+
+setwd("~/Desktop/p16/Test_He_Heatmap/")
+
+#read file_with filtered percentage expressing cells per cell type and organ (Channel)
+
+he_percent=read.delim("/Volumes/etorlait/p16/Published_Data/He_et_al_2020/He_et_al_number_of_cells_expressing_9p21_percentages_removed_vals_when_percentcelltypeorganless025.txt")
+
+#generate a table per each transcript
+p14_freq <- subset(he_percent, select=c('Channel', 'Cell_Type', 'p14_perc'))
+p16_freq <- subset(he_percent, select=c('Channel', 'Cell_Type', 'p16_perc'))
+p15_freq <- subset(he_percent, select=c('Channel', 'Cell_Type', 'p15_perc'))
+ANRIL_freq <- subset(he_percent, select=c('Channel', 'Cell_Type', 'ANRIL_perc'))
+
+#format table for heatmap
+p14_freq_tbl=data.frame(pivot_wider(p14_freq,  
+                         names_from = Channel,
+                         values_from = p14_perc))
+
+rownames(p14_freq_tbl)=p14_freq_tbl$Cell_Type
+p14_freq_tbl$Cell_Type= NULL
+
+##
+p16_freq_tbl=data.frame(pivot_wider(p16_freq,  
+                         names_from = Channel,
+                         values_from = p16_perc))
+
+rownames(p16_freq_tbl)=p16_freq_tbl$Cell_Type
+p16_freq_tbl$Cell_Type= NULL
+
+##
+p15_freq_tbl=data.frame(pivot_wider(p15_freq,  
+                         names_from = Channel,
+                         values_from = p15_perc))
+
+
+rownames(p15_freq_tbl)=p15_freq_tbl$Cell_Type
+p15_freq_tbl$Cell_Type= NULL
+
+##
+ANRIL_freq_tbl=data.frame(pivot_wider(ANRIL_freq,  
+                         names_from = Channel,
+                         values_from = ANRIL_perc))
+
+
+rownames(ANRIL_freq_tbl)=ANRIL_freq_tbl$Cell_Type
+ANRIL_freq_tbl$Cell_Type= NULL
+
+########################### Setting the order of Cell Types ###################################
+order_ct <- c("B Cell", "Plasma Cell", "NK/T Cell", "T Cell", "Macrophage", "Monocyte", "High Proliferation Erythrocyte", "Lymphatic Endothelial Cell", "Endothelial Cell", "Fibroblast", "FibSmo Cell", "Smooth Muscle Cell", "Satellite Cell", "Keratinocyte", "Melanocyte", "Basal Cell", "Squamous Epithelial Cell", "Mucosal Epithelial Cell", "Secretory Cell", "Cholangiocyte", "Epithelial Cell", "Tuft Cell", "Absorptive Cell", "Enterocyte")
+
+p14_freq_tbl <- p14_freq_tbl[order_ct, ]
+
+p16_freq_tbl <- p16_freq_tbl[order_ct, ]
+
+p15_freq_tbl <- p15_freq_tbl[order_ct, ]
+
+ANRIL_freq_tbl <- ANRIL_freq_tbl[order_ct, ]
+
+########################### Setting the order of Organs ###################################
+order_org <- c('Skin', 'Trachea', 'Muscle', 'Esophagus', 'Stomach', 'Small.intestine', 'Rectum', 'Liver', 'Common.bile.duct', 'Heart', 'Blood', 'Marrow', 'Lymph.node', 'Spleen', 'Bladder')
+
+p14_freq_tbl <- p14_freq_tbl[,order_org]
+
+p16_freq_tbl <- p16_freq_tbl[,order_org]
+
+p15_freq_tbl <- p15_freq_tbl[,order_org]
+
+ANRIL_freq_tbl <- ANRIL_freq_tbl[,order_org]
+
+#P14 Heatmap
+
+col_fun <- colorRamp2(c(0,1,5,15,30,40), c("white","#fee6ce","#fdae6b", "#f16913", "#d94801", "#7f2704"))
+
+ht <- Heatmap(as.matrix(p14_freq_tbl), col = col_fun, name = "[P14] Percentage (%)",
+                cluster_rows = FALSE,
+                cluster_columns = FALSE,
+        heatmap_legend_param = list(at = c(0, 1,5, 15, 30, 40), 
+                                    labels = c("0", "1", "5", "15", "30", "40"),
+                                    labels_gp = gpar(fontsize = 8),  # Adjust the font size
+                                    legend_height = unit(1, "cm"),    # Adjust the height
+                                    legend_width = unit(4, "cm"),
+                                    direction = "horizontal"),
+        row_names_gp = gpar(fontsize = 8),
+        column_names_gp = gpar(fontsize = 8),
+        use_raster = F
+)  
+
+pdf('He_filt_perc_less_025_p14_heatmap.pdf', width = 6, height = 8)
+draw(ht, heatmap_legend_side = "top", annotation_legend_side = "top")
+dev.off()
+
+#P16 Heatmap
+
+col_fun2 <- colorRamp2(c(0,1,2,5,7), c("white","#9ecae1","#6baed6","#2171b5","#08306b"))
+
+ht <- Heatmap(as.matrix(p16_freq_tbl), col = col_fun2, name = "[P16] Percentage (%)",
+        cluster_rows = FALSE,
+        cluster_columns = FALSE,
+        heatmap_legend_param = list(at = c(0, 1, 2, 5, 7), 
+                                    labels = c("0", "1", "2", "5", "7"),
+                                    labels_gp = gpar(fontsize = 8),  # Adjust the font size
+                                    legend_height = unit(1, "cm"),    # Adjust the height
+                                    legend_width = unit(1.5, "cm"), #other font size to make ticks = 2cm
+                                    direction = "horizontal"),
+        row_names_gp = gpar(fontsize = 8),
+        column_names_gp = gpar(fontsize = 8), 
+        use_raster = F
+)  
+
+pdf('He_filt_perc_less_025_p16_heatmap.pdf', width = 6, height = 8)
+draw(ht, heatmap_legend_side = "top", annotation_legend_side = "top")
+dev.off()
+
+#P15 Heatmap
+
+ht <- Heatmap(as.matrix(p15_freq_tbl), col = col_fun, name = "[P15] Percentage (%)",
+        cluster_rows = FALSE,
+        cluster_columns = FALSE,
+        heatmap_legend_param = list(at = c(0, 1, 5, 15, 30,40),
+                                    labels = c("0", "1", "5", "15", "30","40"),
+                                    labels_gp = gpar(fontsize = 8),  # Adjust the font size
+                                    legend_height = unit(1, "cm"),    # Adjust the height
+                                    legend_width = unit(4, "cm"),
+                                    direction = "horizontal"),
+        row_names_gp = gpar(fontsize = 8),
+        column_names_gp = gpar(fontsize = 8),
+        use_raster = F
+)  
+
+pdf('He_filt_perc_less_025_p15_heatmap.pdf', width = 6, height = 8)
+draw(ht, heatmap_legend_side = "top", annotation_legend_side = "top")
+dev.off()
+
+#ANRIL Heatmap
+
+ht <- Heatmap(as.matrix(ANRIL_freq_tbl), col = col_fun, name = "[ANRIL] Percentage (%)",
+        cluster_rows = FALSE,
+        cluster_columns = FALSE,
+        heatmap_legend_param = list(at = c(0, 1, 5, 15, 30, 40), 
+                                    labels = c("0","1","5", "15", "30", "40"),
+                                    labels_gp = gpar(fontsize = 8),  # Adjust the font size
+                                    legend_height = unit(1, "cm"),    # Adjust the height
+                                    legend_width = unit(4, "cm"),
+                                    direction = "horizontal"),
+        row_names_gp = gpar(fontsize = 8),
+        column_names_gp = gpar(fontsize = 8),
+        use_raster = F
+)  
+
+pdf('He_filt_perc_less_025_ANRIL_heatmap.pdf', width = 6, height = 8)
+draw(ht, heatmap_legend_side = "top", annotation_legend_side = "top")
+dev.off()
