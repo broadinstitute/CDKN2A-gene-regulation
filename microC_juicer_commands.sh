@@ -1,5 +1,6 @@
 ## Some Juicer commands for the microC
-## I've already aligned and created all the "merged_nodups" or "mnd" files
+## I've already aligned and created all the "merged_nodups" or "mnd" files via UGER
+##  ~/juiceDir/scripts/juicer.sh -g hg38 -e -D ~/juiceDir/
 ## These contain, on each line, one Hi-C contact
 ## These are all in the gs://broad-p16-calico/microC folder
 ##
