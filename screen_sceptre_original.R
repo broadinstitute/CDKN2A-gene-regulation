@@ -6,7 +6,7 @@ library(Seurat)
 library(sceptre)
 library(ggpubr)
 
-outname <- "sceptre_guides_nG50_new_ref_anril_guide"
+outname <- "sceptre_guides_nG50_new_ref_anril_guide_MTAP_DMRTA1"
 
 screen.rna <- readRDS("screen.rna.rds")
 gene_matrix <- GetAssayData(screen.rna, slot = "counts")
@@ -48,17 +48,17 @@ covariate_matrix <- covariate_matrix[common_barcodes, ]
 perturbation_matrix <- threshold_gRNA_matrix(gRNA_matrix,10)
 
 # This is only used when running in target mode
-#gRNA_groups_table <- read.table("data/gRNAs_targets.tsv", head=TRUE, sep="\t")
-#combined_perturbation_matrix <- combine_perturbations(perturbation_matrix = perturbation_matrix,
-#                                                      gRNA_groups_table = gRNA_groups_table)
+gRNA_groups_table <- read.table("data/gRNAs_targets.tsv", head=TRUE, sep="\t")
+combined_perturbation_matrix <- combine_perturbations(perturbation_matrix = perturbation_matrix,
+                                                      gRNA_groups_table = gRNA_groups_table)
 # If running in target mode, use "data/genes_gRNAs_targets.tsv", else use "data/genes_gRNAs_guides.tsv"
-gene_gRNA_group_pairs <- read.table("data/genes_gRNAs_guides_ANRIL.tsv", head=TRUE, sep="\t")
+gene_gRNA_group_pairs <- read.table("data/genes_gRNAs_targets_MTAP_DMRTA1.tsv", head=TRUE, sep="\t")
 side <- "both"
 
 # "full" because we ask for full_output, thus far this has not been useful
 result_full <- run_sceptre_highmoi(gene_matrix = gene_matrix,
                                    # HERE change for target vs guide; if target use combined_perturbation_matrix
-                                   combined_perturbation_matrix = perturbation_matrix,
+                                   combined_perturbation_matrix = combined_perturbation_matrix,
                                    covariate_matrix = covariate_matrix,
                                    gene_gRNA_group_pairs = gene_gRNA_group_pairs,
                                    side = side, 
