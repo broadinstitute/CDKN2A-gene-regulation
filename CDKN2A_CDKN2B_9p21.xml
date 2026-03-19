@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  IGV session file for the 9p21 locus (CDKN2A/CDKN2B region).
+
+  Tracks included:
+  - Region Capture Micro-C loops (combined PDLs)
+  - CTCF ChIP-seq (PDL33, PDL54)
+  - H3K27ac ChIP-seq (PDL33, PDL54)
+  - ATAC-seq (PDL20, PDL50)
+  - SCEPTRE guide significance (p14, p16, CDKN2B, CDKN2B-AS1, MTAP)
+  - gRNA target regions and validation set
+  - Gene annotations
+
+  Open in IGV desktop (https://igv.org/) or load via IGV web app.
+
+  TODO: Replace this placeholder with the finalized session XML.
+-->
+<Session genome="hg38" hasGeneTrack="true" hasSequenceTrack="true" locus="chr9:21874994-22300000" version="8">
+</Session>

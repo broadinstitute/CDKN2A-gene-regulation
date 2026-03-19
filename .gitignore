@@ -1,0 +1,61 @@
+# Large data files
+*.hic
+*.h5ad
+*.hdf5
+*.bam
+*.bai
+*.bw
+*.bigwig
+*.bigWig
+
+# GTF files (too large for GitHub — available on GEO GSE309515)
+*.gtf
+*.gtf.gz
+
+# R workspace
+.RData
+.Rhistory
+.Rapp.history
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Sceptre output directories
+sceptre_guides_*/
+not_using_new_sceptre_threshold_10/
+
+# Temporary / scratch
+tmp/
+__pycache__/
+
+# Manuscript files
+*.docx
+*.xlsx
+
+# Large output files
+*.pdf
+*.svg
+*.png
+
+# Data files that should be downloaded separately
+*.csv
+*.rds
+*.bed
+*.bedpe
+*.bedGraph
+*.wig
+Bing_Ren_ATAC/
+
+# Misc
+*.xml
+!CDKN2A_CDKN2B_9p21.xml
+first_part
+listing
+gnames
+gnames2
+full_gnames.txt
+gname_mapping.txt
+guides_p.01
