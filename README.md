@@ -14,9 +14,9 @@ To distinguish p14ARF and p16INK4A in single-cell expression data, we generated 
 
 | GTF file | Purpose | Description |
 |---|---|---|
-| [GSE309515_gencode.v34.5prime.gtf](https://storage.googleapis.com/broad-p16-calico/public/GSE309515_gencode.v34.5prime.gtf) | 5’ scRNA-seq analysis (Fig 2) | CDKN2A split into two separate genes: p16INK4A (ENST00000304494.9) and p14ARF (ENST00000579755.1), each with its own gene_id |
-| [GSE309515_gencode.v34.3primetest.gtf](https://storage.googleapis.com/broad-p16-calico/public/GSE309515_gencode.v34.3primetest.gtf) | Testing 3’ transcript specificity (Fig 3) | CDKN2A annotated with only exon 2 and exon 3 (shared between p14 and p16), to verify that 3’ RNA-seq CDKN2A counts are not transcript-specific |
-| [GSE309515_gencode.v34.dialup.gtf](https://storage.googleapis.com/broad-p16-calico/public/GSE309515_gencode.v34.dialup.gtf) | Targeted enrichment (dial-up) from 3’ libraries (Fig 3) | Tailored to primer positioning for the p14/p16 enrichment protocol |
+| [GSE309515_gencode.v34.5prime.gtf](https://storage.googleapis.com/broad-p16-calico/public/GSE309515_gencode.v34.5prime.gtf) | 5’ scRNA-seq analysis (Fig 2) | CDKN2A split into two separate genes: p16INK4A (ENST00000304494.9) and p14ARF (ENST00000579755.1), each with its own gene_id; removed all other less-characterised isoforms |
+| [GSE309515_gencode.v34.3primetest.gtf](https://storage.googleapis.com/broad-p16-calico/public/GSE309515_gencode.v34.3primetest.gtf) | Testing 3’ transcript specificity (Fig 3) | CDKN2A annotated with only exon 2 and exon 3 (shared between p14 and p16), exon 1s are annotated as different genes. This is the GTF to check if 3’ RNA-seq CDKN2A reads are mostly in the common exons. |
+| [GSE309515_gencode.v34.dialup.gtf](https://storage.googleapis.com/broad-p16-calico/public/GSE309515_gencode.v34.dialup.gtf) | Targeted enrichment (dial-up) from 3’ libraries (Fig 3-4,6) | Tailored to primer positioning for the p14/p16 enrichment protocol, used on existing breast tissue and fibroblast 10x 3' libraries and CRISPRa Seq-well libraries |
 
 ## Figure-to-code mapping
 
@@ -32,7 +32,7 @@ To distinguish p14ARF and p16INK4A in single-cell expression data, we generated 
 
 ## Analysis
 
-### Deconvolution of CDKN2A in 5’ scRNA-seq (Fig 2)
+### Quantification of p16 and p14 in 5’ scRNA-seq (Fig 2)
 
 Published 5’ scRNA-seq datasets were remapped with the [custom 5’ GTF](#custom-gtfs) using STAR solo (via Cumulus) to quantify p14ARF and p16INK4A per cell. Each notebook processes one dataset:
 
@@ -43,7 +43,7 @@ Published 5’ scRNA-seq datasets were remapped with the [custom 5’ GTF](#cust
 - [Hashimoto_assign_cell_types_umap_plot_v1.ipynb](scRNA_5prime/Hashimoto_assign_cell_types_umap_plot_v1.ipynb) — CD4 T cells from supercentenarians (Hashimoto et al. 2019)
 - [PBMC_10xdata_annotate_and_plot_v1.ipynb](scRNA_5prime/PBMC_10xdata_annotate_and_plot_v1.ipynb) — 10x Genomics PBMCs
 
-### Enrichment of p16 and p14 from 3’ single cell libraries (Fig 3)
+### Enrichment and quantification of p16 and p14 from 3’ single cell libraries (Fig 3)
 
 Analysis of the Gray et al. 2022 mammary tissue 3’ scRNA-seq data, comparing standard CDKN2A detection vs. targeted dial-up enrichment of p14ARF and p16INK4A:
 
@@ -52,7 +52,7 @@ Analysis of the Gray et al. 2022 mammary tissue 3’ scRNA-seq data, comparing s
 - [Brugge_comparison.ipynb](Brugge_comparison.ipynb) — comparison of remapped expression vs. dial-up enrichment
 - [Brugge_umaps_dotplot.ipynb](Brugge_umaps_dotplot.ipynb) — UMAPs and dot plots of dial-up expression by cell type
 
-### p14 to p16 switch during replicative senescence (Fig 4)
+### Expression of p14 and p16 during replicative senescence (Fig 4)
 
 Analysis of the WI-38 Hayflick limit time-course (Chan et al. 2022, GSE175533):
 
