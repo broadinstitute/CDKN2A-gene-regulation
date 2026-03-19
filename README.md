@@ -87,13 +87,6 @@ The CRISPRa screen used [SCEPTRE](https://katsevich-lab.github.io/sceptre/index.
 
 - [replSen_Salmon_mapping_merge_aggregateTPM_atGeneLevel_cellcycle_senmayo.R](replSen_Salmon_mapping_merge_aggregateTPM_atGeneLevel_cellcycle_senmayo.R) — Salmon quantification of total RNA-seq across WI-38 PDLs, aggregation to gene-level TPMs, cell cycle and SenMayo scoring
 
-### Confluence multiome
-
-Analysis of WI-38 multiome (ATAC + RNA) data:
-
-- [confluence_processing.R](confluence_processing.R) — data processing
-- [confluence_high_quality_cell_plots.R](confluence_high_quality_cell_plots.R), [confluence_p14_p16_histogram_plots.R](confluence_p14_p16_histogram_plots.R) — visualization
-
 ### Interactive genome browser
 
 An [IGV](https://igv.org/) session file is provided for interactive exploration of the 9p21 locus, including RCMC loops, CTCF and H3K27ac ChIP-seq, ATAC-seq (PDL20 and PDL50), SCEPTRE guide significance tracks, and gRNA target regions (Fig 5, 6, 7):
