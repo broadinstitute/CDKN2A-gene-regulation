@@ -34,6 +34,7 @@ __pycache__/
 # Manuscript files
 *.docx
 *.xlsx
+Torlai Triglia*.md
 
 # Large output files
 *.pdf
@@ -47,6 +48,10 @@ __pycache__/
 *.bedpe
 *.bedGraph
 *.wig
+!Brugge_5_prime_merged.csv
+!dialup_ratios.csv
+!expression_ratios.csv
+!heatmap_data_Brugge.csv
 Bing_Ren_ATAC/
 
 # Misc
@@ -59,3 +64,45 @@ gnames2
 full_gnames.txt
 gname_mapping.txt
 guides_p.01
+
+# Internal-only (private paths)
+screen.rna.rds
+
+# Superseded / scratch scripts (kept locally, not for publication)
+Untitled.ipynb
+extract_virtual_4C_old*.py
+extract_virtual_4C_PDL21_48.py
+extract_virtual_4C_Wi48_PDL21.py
+output_bedgraph.R
+old_output_bedgraph.R
+heatmap.R
+heatmap_2.R
+heatmap_combined.R
+Final_Cleaned_Merge_with_Dialup.py
+plot_Brugge_p16_p14.py
+
+# Confluence multiome experiment (scratch code, not in any figure)
+confluence_processing.R
+confluence_high_quality_cell_plots.R
+confluence_p14_p16_histogram_plots.R
+data/confluence_cellnames_final_good_set_atac_rna.tsv
+
+# Scratch (superseded by other plotgardener / contact-prob scripts)
+microC_contact_probability.R
+Plotgardener_IMR90_ENCFF685BLG_chr9_21750000-22500000.R
+
+# Internal-only (private bucket / private annotation)
+download_chip.sh
+refGene_withExon1ofP14ModifiedByElena.txt.gz
+
+# Superseded sceptre input variants (replaced by MTAP_DMRTA1 versions)
+data/gRNAs_targets_new_version.tsv
+data/genes_gRNAs_guides_new_version.tsv
+data/genes_gRNAs_targets_new_version.tsv
+data/genes_gRNAs_guides_ANRIL.tsv
+data/genes_gRNAs_targets_ANRIL.tsv
+data/genes_gRNAs_guides_ANRIL_MTAP_DMRTA1.tsv
+data/genes_gRNAs_guides_ANRIL_MTAP_DMRTA1_IFN.tsv
+data/genes_gRNAs_guides_ANRIL_filtered.tsv
+data/genes_gRNAs_guides_MTAP_DMRTA1_IFN.tsv
+data/genes_gRNAs_targets_MTAP.tsv

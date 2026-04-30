@@ -22,15 +22,19 @@ To distinguish p14ARF and p16INK4A in single-cell expression data, we generated 
 
 | Figure | Description | Scripts |
 |---|---|---|
-| Fig 1 | GTEx/FANTOM tissue expression | GTEx data preparation described in Methods |
+| Fig 1 | GTEx/FANTOM tissue expression | [`GTEx_heatmaps_rev_order_addingMTAP.R`](#gtex-tissue-expression-fig-1) |
 | Fig 2 | Cell type expression from 5’ scRNA-seq | Notebooks in [`scRNA_5prime/`](#deconvolution-of-cdkn2a-in-5-scrna-seq-fig-2) |
-| Fig 3 | p16/p14 enrichment from 3’ libraries | [`Figure_3C.py`](#enrichment-of-p16-and-p14-from-3-single-cell-libraries-fig-3), `Figure_3C_expanded.py`, `Brugge_comparison.ipynb`, `Brugge_umaps_dotplot.ipynb` |
+| Fig 3 | p16/p14 enrichment from 3’ libraries | [`Figure_3C_expanded.py`](#enrichment-of-p16-and-p14-from-3-single-cell-libraries-fig-3), `Brugge_comparison.ipynb`, `Brugge_umaps_dotplot.ipynb` |
 | Fig 4 | WI-38 replicative senescence switch | Notebooks in [`scRNA_dialup/`](#p14-to-p16-switch-during-replicative-senescence-fig-4) |
 | Fig 5 | RCMC and epigenomic landscape | [`microC_juicer_commands.sh`](#region-capture-micro-c-and-epigenomic-landscape-fig-5-7), `plotGardener_Wi38_*.R` |
-| Fig 6 | CRISPRa screen and validation | [`screen_sceptre_original.R`](#crispra-screen-fig-6), `screen_processing.R`, `write_bedGraph.R` |
+| Fig 6 | CRISPRa screen and validation | [`screen_sceptre_original.R`](#crispra-screen-fig-6), `screen_processing.R`, `write_bedGraph.R`, `senmayo_safeharbor_E1.R` |
 | Fig 7 | CRE characterization, virtual 4C, tissue accessibility | [`extract_virtual_4C.py`](#region-capture-micro-c-and-epigenomic-landscape-fig-5-7), `Plotgardener_PDL.R` |
 
 ## Analysis
+
+### GTEx tissue expression (Fig 1)
+
+- [GTEx_heatmaps_rev_order_addingMTAP.R](GTEx_heatmaps_rev_order_addingMTAP.R) — ComplexHeatmap plots of CDKN2A (and p14/p16 separately), CDKN2B, CDKN2B-AS1, and MTAP expression across GTEx tissues, ordered by p16/p14 ratio. Reads `heatmap_data_Brugge.csv` (GTEx TPMs aggregated per tissue; preparation described in Methods).
 
 ### Quantification of p16 and p14 in 5’ scRNA-seq (Fig 2)
 
@@ -47,8 +51,7 @@ Published 5’ scRNA-seq datasets were remapped with the [custom 5’ GTF](#cust
 
 Analysis of the Gray et al. 2022 mammary tissue 3’ scRNA-seq data, comparing standard CDKN2A detection vs. targeted dial-up enrichment of p14ARF and p16INK4A:
 
-- [Figure_3C.py](Figure_3C.py) — bar plot comparing p14/p16 detection in standard 3’ RNA-seq vs. dial-up enrichment
-- [Figure_3C_expanded.py](Figure_3C_expanded.py) — expanded version showing that CDKN2A detection is identical between the standard GTF and the exon 2+3 only GTF (i.e. 3’ quantification does not rely on transcript-specific exons)
+- [Figure_3C_expanded.py](Figure_3C_expanded.py) — bar plot comparing p14/p16 detection in standard 3’ RNA-seq vs. dial-up enrichment, also showing that CDKN2A detection is identical between the standard GTF and the exon 2+3 only GTF (i.e. 3’ quantification does not rely on transcript-specific exons). Reads `Brugge_5_prime_merged.csv`
 - [Brugge_comparison.ipynb](Brugge_comparison.ipynb) — comparison of remapped expression vs. dial-up enrichment
 - [Brugge_umaps_dotplot.ipynb](Brugge_umaps_dotplot.ipynb) — UMAPs and dot plots of dial-up expression by cell type
 
@@ -82,6 +85,7 @@ The CRISPRa screen used [SCEPTRE](https://katsevich-lab.github.io/sceptre/index.
 - [write_bedGraph.R](write_bedGraph.R) — generates per-gene bedGraph tracks from SCEPTRE results for IGV visualization
 - [screen_plotting_cells_guides.R](screen_plotting_cells_guides.R), [screen_plotting_promoter_dialup.R](screen_plotting_promoter_dialup.R) — exploratory screen plots
 - [combine_max_p_value.py](combine_max_p_value.py) — combines p-values across targets
+- [senmayo_safeharbor_E1.R](senmayo_safeharbor_E1.R) — compares SenMayo signature score in cells with E1 target guides vs safe-harbor guides, regressing out per-cell guide count. Uses [SenMayo_signature.txt](SenMayo_signature.txt)
 
 ### Total RNA-seq
 
@@ -93,7 +97,47 @@ An [IGV](https://igv.org/) session file is provided for interactive exploration 
 
 - [CDKN2A_CDKN2B_9p21.xml](CDKN2A_CDKN2B_9p21.xml) — open in [IGV desktop](https://igv.org/) or load in [IGV web app](https://igv.org/app/)
 
-<!-- TODO: add IGV web app direct link with session URL once XML is finalized -->
+## Reproducing from GEO
+
+All raw and processed data live at [GEO GSE309515](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE309515) as five sub-series (microC, dial-up scRNA-seq, CRISPRa screen, ChIP-seq, total RNA-seq). Scripts in this repo expect GEO file names as-is. Below is what each script reads.
+
+### Region Capture Micro-C (Fig 5, 7)
+
+Stage these processed files in the repo root (or symlink them):
+
+- `merged.hic`, `microC_WI-38_PDL21.hic`, `microC_WI-38_PDL48_Rep2.hic`, `merged_hiccups_filtered.bedpe`
+
+Then `extract_virtual_4C.py`, `Plotgardener_PDL.R`, and `plotGardener_Wi38_late_min_early_*.R` will run from the repo root.
+
+### CRISPRa screen (Fig 6)
+
+Download all dial-up scRNA-seq processed files (`mRNA_arrayN_{barcodes,features,matrix}.tsv.gz/.mtx.gz`, `Dialup-array{7..16}_{barcodes,features,matrix}.tsv.gz/.mtx.gz`, `new-screen-CROP-orig-stitch-array{1..6}_{barcodes,features,matrix}.tsv.gz/.mtx.gz`) into a single directory `geo_screen/` next to the scripts. Then:
+
+```r
+source("screen_processing.R")        # writes data/screen.rna.rds
+source("screen_sceptre_original.R")  # or screen_sceptre_new_version.R
+source("write_bedGraph.R")
+```
+
+### Total RNA-seq
+
+Download `PDL{21,33,41,48,535,54,57}_quant.sf` into `geo_totalRNA/`. Also requires `mart_export_GRCh38.p13.txt` (download from Ensembl BioMart with columns "Gene stable ID" + "Gene name") next to the script. Then run `replSen_Salmon_mapping_merge_aggregateTPM_atGeneLevel_cellcycle_senmayo.R`.
+
+### Dial-up scRNA-seq notebooks (Fig 3, 4)
+
+The scRNA_5prime/ and scRNA_dialup/ notebooks read from public GEO/SRA accessions cited in the Methods. The Brugge breast tissue notebooks (`Brugge_*.ipynb`, `Figure_3C_expanded.py`) operate on per-cell summary tables derived from the dial-up matrices on GEO; the small derived inputs we use (`Brugge_5_prime_merged.csv`, `dialup_ratios.csv`, `expression_ratios.csv`, `heatmap_data_Brugge.csv`) are tracked in this repo. The cell-level p16/p14 enrichment counts (`*_p16_p14_per_cell.tsv`, expected by `Brugge_umaps_dotplot.ipynb` under `dialup_brugge/`) and the Gray et al. annotated h5ad must be regenerated from the GEO matrices and Synapse `syn26560310`.
+
+### Analyses not in this repo
+
+The following analyses are described in Methods but use standard pipelines or were performed by collaborators; no custom code is included here. Refer to the Methods section for parameters.
+
+- ATAC-seq processing (bowtie2 + macs2 + deepTools CPM normalization)
+- ChIP-seq processing (ENCODE uniform pipeline; HOMER peak calling)
+- ChromBPNet 0.1.7 attribution scores + DeepLIFT + TOMTOM motif annotation
+- DiffBind/DESeq2 selection of the 173 CRISPRa target regions
+- qRT-PCR Z-score / fold-change combination across replicates
+- GTEx violin plots (Fig 1F, Suppl Fig 3) and GTEx + FANTOM upset plots (Fig 1D-E)
+- sci-ATAC-seq cCRE × cell type heatmap (Fig 7E)
 
 ## Software
 

@@ -5,37 +5,16 @@ library(Seurat)
 library(ggplot2)
 library(Matrix)
 
-#' This function processes the mRNA array. It filters by min cells 3 and min
-#' features 200, calculates percent mitochondria, then subsets on  
-#' 500 <= nGenes <= 6000, nUMI >= 750, and percent mitochondra < 15 
-#' 
-#' @param filename The base directory, should contain 10X style barcodes, features, matrix
-#' @returns Seurat object with filtered gene by cell data
-processarray <- function(filename) {
-  data <- Read10X(data.dir = filename)
-  singlearray <- CreateSeuratObject(counts = data, project = basename(filename), min.cells = 3, min.features = 200)
-  singlearray[["percent.mt"]] <- PercentageFeatureSet(singlearray, pattern = "^MT-")
-  singlearray@meta.data <- singlearray@meta.data %>% dplyr::rename(nUMI = nCount_RNA, nGene = nFeature_RNA)
-  
-  singlearray <- subset(singlearray, subset = nGene > 499 & nGene < 6001 & nUMI > 749 & percent.mt < 15)
-  # subset adds these back in for some reason
-  singlearray$nCount_RNA <- NULL
-  singlearray$nFeature_RNA <- NULL
-  # Sceptre does not use normalized counts so we don't do this step, as it creates an enormous object
-  #singlearray<- SCTransform(singlearray, verbose = TRUE)
-  return(singlearray)
-} 
-
-#' This function processes the CROP array, returning matrices with 
+#' This function processes the CROP array, returning matrices with
 #' guides per cell, specific genes per cell, and
-#' the general crop number of umi per cell (including off target alignments) 
-#' 
-#' @param filename The base directory for CROP sequencing, should contain 10X style barcodes, features, matrix
-#' @param prefix The prefix for this array, will need to match what was done for the mRNA
+#' the general crop number of umi per cell (including off target alignments)
+#'
+#' @param geo_prefix The GEO file prefix for this array (e.g. "Dialup-array7")
+#' @param prefix The cell-id prefix for this array, will need to match what was done for the mRNA
 #' @param high.quality.cells The names of the cells kept from the mRNA
 #' @returns Three matrices, one that is cells by guides, one that is cells by genes, and one that is cells by crop_numi
-processcrop <- function(filename, prefix, high.quality.cells) {
-  crop.data <- Read10X(data.dir = filename)
+processcrop <- function(geo_prefix, prefix, high.quality.cells) {
+  crop.data <- read10x_flat(geo_prefix)
   n <- paste0(prefix,colnames(crop.data))
   inds <- which(n %in% high.quality.cells)
   mytable <- tail(crop.data, n=724)[,inds]
@@ -60,51 +39,55 @@ processcrop <- function(filename, prefix, high.quality.cells) {
   return(list(guides = mytable, dialup_genes = mytable1,crop_meta = crop1@meta.data))
 }
 
-array01 <- processarray("/Users/neva/Documents/calico/mRNA_standard_reference/array01")
-array02 <- processarray("/Users/neva/Documents/calico/mRNA_standard_reference/array02")
-array03 <- processarray("/Users/neva/Documents/calico/mRNA_standard_reference/array03")
-array04 <- processarray("/Users/neva/Documents/calico/mRNA_standard_reference/array04")
-array05 <- processarray("/Users/neva/Documents/calico/mRNA_standard_reference/array05")
-array06 <- processarray("/Users/neva/Documents/calico/mRNA_standard_reference/array06")
-array07 <- processarray("/Users/neva/Documents/calico/mRNA_standard_reference/array07")
-array08 <- processarray("/Users/neva/Documents/calico/mRNA_standard_reference/array08")
-array09 <- processarray("/Users/neva/Documents/calico/mRNA_standard_reference/array09")
-array10 <- processarray("/Users/neva/Documents/calico/mRNA_standard_reference/array10")
-array11 <- processarray("/Users/neva/Documents/calico/mRNA_standard_reference/array11")
-array12 <- processarray("/Users/neva/Documents/calico/mRNA_standard_reference/array12")
-array13 <- processarray("/Users/neva/Documents/calico/mRNA_standard_reference/array13")
-array14 <- processarray("/Users/neva/Documents/calico/mRNA_standard_reference/array14")
-array15 <- processarray("/Users/neva/Documents/calico/mRNA_standard_reference/array15")
-array16 <- processarray("/Users/neva/Documents/calico/mRNA_standard_reference/array16")
+## --------------------------------------------------------------------------
+## Set this to the directory containing the GEO processed files
+## (mRNA_arrayN_{barcodes,features,matrix} and the dial-up triplets).
+## See README §"Reproducing from GEO" for the file layout.
+## --------------------------------------------------------------------------
+geo_dir <- "geo_screen"
 
-screen.rna <- merge(array01, y = c(array02, array03,array04,array05,array06,array07,array08,array09,array10,array11,array12,array13,array14,array15,array16), add.cell.ids = c("a01", "a02", "a03","a04", "a05", "a06", "a07","a08","a09","a10","a11","a12","a13","a14","a15","a16"), project = "screen")
+## Read 10x-style triplets that GEO ships as flat files (prefix_{barcodes,features,matrix}).
+read10x_flat <- function(geo_prefix) {
+  d <- tempfile(); dir.create(d)
+  file.copy(file.path(geo_dir, paste0(geo_prefix, "_barcodes.tsv.gz")), file.path(d, "barcodes.tsv.gz"))
+  file.copy(file.path(geo_dir, paste0(geo_prefix, "_features.tsv.gz")), file.path(d, "features.tsv.gz"))
+  file.copy(file.path(geo_dir, paste0(geo_prefix, "_matrix.mtx.gz")),   file.path(d, "matrix.mtx.gz"))
+  Read10X(data.dir = d)
+}
+
+#' Process an mRNA array. Filter by min cells 3 and min features 200, calculate
+#' percent mitochondria, subset on 500 <= nGenes <= 6000, nUMI >= 750, percent.mt < 15.
+processarray <- function(geo_prefix) {
+  data <- read10x_flat(geo_prefix)
+  singlearray <- CreateSeuratObject(counts = data, project = geo_prefix, min.cells = 3, min.features = 200)
+  singlearray[["percent.mt"]] <- PercentageFeatureSet(singlearray, pattern = "^MT-")
+  singlearray@meta.data <- singlearray@meta.data %>% dplyr::rename(nUMI = nCount_RNA, nGene = nFeature_RNA)
+  singlearray <- subset(singlearray, subset = nGene > 499 & nGene < 6001 & nUMI > 749 & percent.mt < 15)
+  singlearray$nCount_RNA <- NULL
+  singlearray$nFeature_RNA <- NULL
+  return(singlearray)
+}
+
+## mRNA libraries: GEO names mRNA_array1 ... mRNA_array16
+mrna_arrays <- lapply(1:16, function(i) processarray(paste0("mRNA_array", i)))
+names(mrna_arrays) <- paste0("a", sprintf("%02d", 1:16))
+
+screen.rna <- merge(mrna_arrays[[1]], y = mrna_arrays[-1],
+                    add.cell.ids = names(mrna_arrays), project = "screen")
 
 # Add cell IDs to metadata
 screen.rna@meta.data$cells <- rownames(screen.rna@meta.data)
 
-# Dialup filenames
-filenames <- c("/Users/neva/Documents/calico/newscreen/new-screen-CROP-orig-stitch-array1/", 
-               "/Users/neva/Documents/calico/newscreen/new-screen-CROP-orig-stitch-array2/",
-               "/Users/neva/Documents/calico/newscreen/new-screen-CROP-orig-stitch-array3/",
-               "/Users/neva/Documents/calico/newscreen/new-screen-CROP-orig-stitch-array4/",
-               "/Users/neva/Documents/calico/newscreen/new-screen-CROP-orig-stitch-array5/",
-               "/Users/neva/Documents/calico/newscreen/new-screen-CROP-orig-stitch-array6/",
-               "/Users/neva/Documents/calico/newscreen/Dialup-array7/",
-               "/Users/neva/Documents/calico/newscreen/Dialup-array8/",
-               "/Users/neva/Documents/calico/newscreen/Dialup-array9/",
-               "/Users/neva/Documents/calico/newscreen/Dialup-array10/",
-               "/Users/neva/Documents/calico/newscreen/Dialup-array11/",
-               "/Users/neva/Documents/calico/newscreen/Dialup-array12/",
-               "/Users/neva/Documents/calico/newscreen/Dialup-array13/",
-               "/Users/neva/Documents/calico/newscreen/Dialup-array14/",
-               "/Users/neva/Documents/calico/newscreen/Dialup-array15/",
-               "/Users/neva/Documents/calico/newscreen/Dialup-array16/")
-prefixes <- c("a01_", "a02_", "a03_", "a04_", "a05_", "a06_", "a07_", "a08_", "a09_", "a10_", "a11_", "a12_","a13_", "a14_", "a15_", "a16_") 
+## Dial-up / CROP libraries: arrays 1-6 are named new-screen-CROP-orig-stitch-arrayN,
+## arrays 7-16 are named Dialup-arrayN on GEO.
+dialup_prefixes <- c(paste0("new-screen-CROP-orig-stitch-array", 1:6),
+                     paste0("Dialup-array", 7:16))
+cell_prefixes <- paste0("a", sprintf("%02d", 1:16), "_")
 hq_cells <- screen.rna@meta.data$cells
 
 # Apply processcrop function on each dialup array
-crop_outputs <- lapply(1:length(filenames), function(i) {
-  processcrop(filename = filenames[i], prefix = prefixes[i], high.quality.cells = hq_cells)
+crop_outputs <- lapply(seq_along(dialup_prefixes), function(i) {
+  processcrop(geo_prefix = dialup_prefixes[i], prefix = cell_prefixes[i], high.quality.cells = hq_cells)
 })
 
 # Concatenate tables for each of 'guides', 'dialup_genes', and 'crop_meta'
@@ -142,7 +125,7 @@ metadata2 <- left_join(screen.rna@meta.data, final_guides, by = "cells")
 rownames(metadata2)<-metadata2$cells
 screen.rna <- AddMetaData(screen.rna, metadata = metadata2)
 
-saveRDS(screen.rna, "screen.rna.rds")
+saveRDS(screen.rna, "data/screen.rna.rds")
 
 ################# QC Plots and Clustering
 #########

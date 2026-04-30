@@ -1,13 +1,11 @@
-setwd('/Volumes/etorlait/p16/Plotgardener/')
-
 library(plotgardener)
 library(RColorBrewer)
 
-hicDataChrom <- readHic(file = "Wi21.hic",
+hicDataChrom <- readHic(file = "microC_WI-38_PDL21.hic",
                         chrom = "chr9", assembly = "hg38",
                         resolution = 5000, res_scale = "BP", norm = "NONE")
 
-hicDataChrom_latePDL <- readHic(file = "microC_Wi48_Rep2.hic",
+hicDataChrom_latePDL <- readHic(file = "microC_WI-38_PDL48_Rep2.hic",
                                 chrom = "chr9", assembly = "hg38",
                                 resolution = 5000, res_scale = "BP", norm = "NONE")
 
@@ -106,5 +104,3 @@ plotGenomeLabel(
 )
 
 dev.off()
-
-chromstart = 20300000, chromend = 22600000,

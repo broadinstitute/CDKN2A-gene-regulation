@@ -61,7 +61,7 @@ def virtual_4c_for_viewpoint(viewpoint_name, viewpoint_start, viewpoint_end, chr
         result_upstream = hicstraw.straw(
             "observed", 
             'NONE', 
-            'data/merged.hic', 
+            'merged.hic', 
             f'chr{chr_name}:{query_start}:{viewpoint_start_rounded}',
             f'chr{chr_name}:{viewpoint_start_rounded}:{viewpoint_end_rounded}',
             'BP', 
@@ -82,7 +82,7 @@ def virtual_4c_for_viewpoint(viewpoint_name, viewpoint_start, viewpoint_end, chr
         result_downstream = hicstraw.straw(
             "observed", 
             'NONE', 
-            'data/merged.hic', 
+            'merged.hic', 
             f'chr{chr_name}:{viewpoint_start_rounded}:{viewpoint_end_rounded}',
             f'chr{chr_name}:{viewpoint_start_rounded}:{query_end}',
             'BP', 

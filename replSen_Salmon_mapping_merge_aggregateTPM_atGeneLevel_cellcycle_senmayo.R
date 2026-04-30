@@ -1,16 +1,19 @@
-setwd("/Volumes/etorlait/p16/Salmon_Remapping/")
+## --------------------------------------------------------------------------
+## Set this to the directory containing the GEO processed Salmon outputs:
+## PDL21_quant.sf, PDL33_quant.sf, PDL41_quant.sf, PDL48_quant.sf,
+## PDL535_quant.sf, PDL54_quant.sf, PDL57_quant.sf
+## See README §"Reproducing from GEO" for download instructions.
+## --------------------------------------------------------------------------
+geo_dir <- "geo_totalRNA"
 
-samples <- read.table("samples.txt", header = TRUE)
-samples
+samples <- c("PDL21", "PDL33", "PDL41", "PDL48", "PDL535", "PDL54", "PDL57")
+files <- file.path(geo_dir, paste0(samples, "_quant.sf"))
+names(files) <- samples
+stopifnot(all(file.exists(files)))
 
-samples=samples[1:7,]
-
-files <- file.path("/Volumes/etorlait/p16/Salmon_Remapping/",samples$dir, "/quant.sf")
-all(file.exists(files))
-
-names(files) <- paste0(samples$sample)
-
-mart_gene_transc <- read.delim('/Volumes/etorlait/p16/Tyler_RS_Salmon_Quants_fromNeva/ENSEMBLT_to_Gene/mart_export_downloaded_20230303.txt', sep='\t')
+## Ensembl Gene ID → Gene Symbol mapping. Download from Ensembl BioMart (GRCh38.p13)
+## with columns "Gene stable ID" and "Gene name" and save next to this script.
+mart_gene_transc <- read.delim('mart_export_GRCh38.p13.txt', sep='\t')
 
 gene_gs=subset(mart_gene_transc, select=c('Gene.stable.ID', 'Gene.name'))
 

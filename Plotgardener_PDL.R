@@ -128,12 +128,12 @@ generate_hic_plots <- function(hic_file_path, sample_label) {
 
 # File 1: Wi21 combined (Rep1 + Rep2)
 generate_hic_plots(
-  hic_file_path = "data/Wi21.hic",
+  hic_file_path = "microC_WI-38_PDL21.hic",
   sample_label = "PDL21"
 )
 
 # File 2: Wi48 Rep2
 generate_hic_plots(
-  hic_file_path = "data/microC_Wi48_Rep2.hic",
+  hic_file_path = "microC_WI-38_PDL48_Rep2.hic",
   sample_label = "PDL48"
 )

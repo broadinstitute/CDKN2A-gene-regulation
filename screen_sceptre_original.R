@@ -8,7 +8,7 @@ library(ggpubr)
 
 outname <- "sceptre_guides_nG50_new_ref_anril_guide_MTAP_DMRTA1"
 
-screen.rna <- readRDS("screen.rna.rds")
+screen.rna <- readRDS("data/screen.rna.rds")
 gene_matrix <- GetAssayData(screen.rna, slot = "counts")
 gRNA_matrix <- t(screen.rna@meta.data[,7:730])
 gRNA_matrix <- gRNA_matrix[rowSums(gRNA_matrix) > 0,]
@@ -51,7 +51,8 @@ perturbation_matrix <- threshold_gRNA_matrix(gRNA_matrix,10)
 gRNA_groups_table <- read.table("data/gRNAs_targets.tsv", head=TRUE, sep="\t")
 combined_perturbation_matrix <- combine_perturbations(perturbation_matrix = perturbation_matrix,
                                                       gRNA_groups_table = gRNA_groups_table)
-# If running in target mode, use "data/genes_gRNAs_targets.tsv", else use "data/genes_gRNAs_guides.tsv"
+# If running in target mode, use "data/genes_gRNAs_targets_MTAP_DMRTA1.tsv" (below);
+# else use "data/genes_gRNAs_guides.tsv" and pass perturbation_matrix instead of combined_perturbation_matrix.
 gene_gRNA_group_pairs <- read.table("data/genes_gRNAs_targets_MTAP_DMRTA1.tsv", head=TRUE, sep="\t")
 side <- "both"
 
