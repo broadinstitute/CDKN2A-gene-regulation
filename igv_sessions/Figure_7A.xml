@@ -14,7 +14,7 @@
         <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw" type="bw"/>
     </Resources>
     <Panel height="650" name="DataPanel" width="1422">
-        <Track arcOption="ALL" attributeKey="RCMC loops merged_hiccups.bedpe" autoscale="true" clazz="org.broad.igv.bedpe.InteractionTrack" color="180,25,137" direction="UP" fontSize="10" graphType="NESTED_ARC" height="250" id="/Users/egaskell/Documents/Calico p16/9p21 gene regulation manuscript/IGV sessions /Revised version/RCMC loops merged_hiccups.bedpe" name="RCMC loops merged_hiccups.bedpe" showBlocks="true" thickness="1" visible="true"/>
+        <Track arcOption="ALL" attributeKey="RCMC loops merged_hiccups.bedpe" autoscale="true" clazz="org.broad.igv.bedpe.InteractionTrack" color="180,25,137" direction="UP" fontSize="10" graphType="NESTED_ARC" height="250" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/RCMC_loops_merged_hiccups.bedpe" name="RCMC loops merged_hiccups.bedpe" showBlocks="true" thickness="1" visible="true"/>
         <Track attributeKey="CTCF_PDL33_hg38.CPM.bw" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL33_hg38.CPM.bw" name="CTCF_PDL33_hg38.CPM.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="4.8420787" minimum="0.0" type="LINEAR"/>
         </Track>
@@ -27,19 +27,19 @@
         <Track attributeKey="H3K27ac_PDL54_hg38.CPM.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="102,102,102" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw" name="H3K27ac_PDL54_hg38.CPM.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="2.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="Virtual_4C_E1" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="/Users/egaskell/Documents/Calico p16/9p21 gene regulation manuscript/IGV sessions /Revised version/Final Revised IGVF sessions /RCMC and 4C tracks/virtual_4C_E1_chr9_res500.wig" name="Virtual_4C_E1" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="Virtual_4C_E1" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E1_chr9_res500.wig" name="Virtual_4C_E1" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="Virtual_4C_E1" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="/Users/egaskell/Documents/Calico p16/9p21 gene regulation manuscript/IGV sessions /Revised version/Final Revised IGVF sessions /RCMC and 4C tracks/virtual_4C_P16_chr9_res500.wig" name="Virtual_4C_p16" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="Virtual_4C_E1" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_P16_chr9_res500.wig" name="Virtual_4C_p16" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="Virtual_4C_P14" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="/Users/egaskell/Documents/Calico p16/9p21 gene regulation manuscript/IGV sessions /Revised version/Final Revised IGVF sessions /RCMC and 4C tracks/virtual_4C_P14_chr9_res500.wig" name="Virtual_4C_P14" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="Virtual_4C_P14" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_P14_chr9_res500.wig" name="Virtual_4C_P14" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="Virtual_4C_P15" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="/Users/egaskell/Documents/Calico p16/9p21 gene regulation manuscript/IGV sessions /Revised version/Final Revised IGVF sessions /RCMC and 4C tracks/virtual_4C_P15_chr9_res500.wig" name="Virtual_4C_P15" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="Virtual_4C_P15" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_P15_chr9_res500.wig" name="Virtual_4C_P15" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="target_regions.validated.tidy.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="/Users/egaskell/Documents/Calico p16/9p21 gene regulation manuscript/IGV sessions /Revised version/Final Revised IGVF sessions /target_regions.validated.tidy.bed" name="target_regions.validated.tidy.bed" visible="true"/>
+        <Track attributeKey="target_regions.validated.tidy.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy.bed" name="target_regions.validated.tidy.bed" visible="true"/>
         <Track attributeKey="refGene_CDKN2AvB.txt.gz" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz" name="refGene_CDKN2AvB.txt.gz" visible="true"/>
     </Panel>
     <Panel height="32" name="FeaturePanel" width="1422">

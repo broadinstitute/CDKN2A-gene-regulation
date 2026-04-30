@@ -30,7 +30,7 @@
         <Track attributeKey="PDL50_TP7_omni_A.shift.sorted.CPM.bw" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ATAC-seq_bulk_bams/CPM_Norm/PDL50_TP7_omni_A.shift.sorted.CPM.bw" name="PDL50_TP7_omni_A.shift.sorted.CPM.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="2.95389" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="ENCODE CRES-GRCh38-ccREs_4IGV.bed" clazz="org.broad.igv.track.FeatureTrack" color="0,153,0" fontSize="10" groupByStrand="false" id="/Users/egaskell/Documents/Calico p16/9p21 gene regulation manuscript/IGV sessions /Revised version/Final Revised IGVF sessions /ENCODE CRES-GRCh38-ccREs_4IGV.bed" name="ENCODE CRES-GRCh38-ccREs_4IGV.bed" visible="true"/>
+        <Track attributeKey="ENCODE CRES-GRCh38-ccREs_4IGV.bed" clazz="org.broad.igv.track.FeatureTrack" color="0,153,0" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/GRCh38-ccREs.bed" name="ENCODE CRES-GRCh38-ccREs_4IGV.bed" visible="true"/>
         <Track attributeKey="target_regions.bed" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" colorScale="ContinuousColorScale;0.0;173.0;255,255,255;0,0,0" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/target_regions.bed" name="Screen target regions" visible="true"/>
         <Track attributeKey="refGene_CDKN2AvB.txt.gz" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz" name="refGene_CDKN2AvB.txt.gz" visible="true"/>
     </Panel>
