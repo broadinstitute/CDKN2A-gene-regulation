@@ -107,11 +107,6 @@ The CRISPRa screen used [SCEPTRE](https://katsevich-lab.github.io/sceptre/index.
 | Suppl Fig 15B | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fraw.githubusercontent.com%2Fbroadinstitute%2FCDKN2A-gene-regulation%2Fmain%2Figv_sessions%2FSupplemental_Figure_15B.xml) | [`Supplemental_Figure_15B.xml`](igv_sessions/Supplemental_Figure_15B.xml) |
 | Suppl Fig 18 | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fraw.githubusercontent.com%2Fbroadinstitute%2FCDKN2A-gene-regulation%2Fmain%2Figv_sessions%2FSupplemental_Figure_18.xml) | [`Supplemental_Figure_18.xml`](igv_sessions/Supplemental_Figure_18.xml) |
 
-Working sessions used during analysis (not tied to a specific paper figure):
-
-- [`Virtual_4C_session_2026-01-20.xml`](igv_sessions/Virtual_4C_session_2026-01-20.xml) — virtual 4C from CRE viewpoints
-- [`Virtual_4C_session_2026-01-22.xml`](igv_sessions/Virtual_4C_session_2026-01-22.xml) — virtual 4C from promoter viewpoints
-
 XMLs can also be opened directly in [IGV desktop](https://igv.org/). All track URLs in each session are publicly hosted at `gs://broad-p16-calico/`.
 
 ## Reproducing from GEO
