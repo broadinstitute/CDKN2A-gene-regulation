@@ -75,6 +75,10 @@ Analysis of the WI-38 Hayflick limit time-course (Chan et al. 2022, GSE175533):
 
 ### CRISPRa screen (Fig 6)
 
+The 173 target regions for the CRISPRa screen were selected from a DiffBind/DESeq2 analysis of the [Chan et al. 2022](https://elifesciences.org/articles/70283) WI-38 ATAC-seq time-course (PDL50 vs each other timepoint, FDR≤0.05, |log2FC|≥log2(1.5)) plus manual inclusion of ENCODE cCREs and fine-mapped GWAS variants in the 9p21 TAD. See Methods §"Selection of regions for CRISPRa screen experiment" for the full criteria.
+
+- [`data/CRISPRa_target_regions.bed`](data/CRISPRa_target_regions.bed) — 173 regions with manual DAR-type annotations (`Inc_seems-like`, `Dec_seems-like`, etc.) used as targets for the screen.
+
 The CRISPRa screen used [SCEPTRE](https://katsevich-lab.github.io/sceptre/index.html) for statistical analysis of single-cell CRISPR perturbations (High MOI).
 
 - [screen_alignment.sh](screen_alignment.sh) — STAR solo alignment calls for screen mRNA and dial-up
@@ -146,7 +150,6 @@ The following analyses are described in Methods but use standard pipelines or we
 - ATAC-seq processing (bowtie2 + macs2 + deepTools CPM normalization)
 - ChIP-seq processing (ENCODE uniform pipeline; HOMER peak calling)
 - ChromBPNet 0.1.7 attribution scores + DeepLIFT + TOMTOM motif annotation
-- DiffBind/DESeq2 selection of the 173 CRISPRa target regions
 - qRT-PCR Z-score / fold-change combination across replicates
 - GTEx violin plots (Fig 1F, Suppl Fig 3) and GTEx + FANTOM upset plots (Fig 1D-E)
 - sci-ATAC-seq cCRE × cell type heatmap (Fig 7E)
