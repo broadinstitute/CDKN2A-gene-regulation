@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Session genome="hg38" locus="chr9:22105461-22117361" nextAutoscaleGroup="2" version="8">
-    <Resources>
-        <Resource path="https://hgdownload.soe.ucsc.edu/goldenPath/hg38/phastCons100way/hg38.phastCons100way.bw" type="bw"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy.bed" type="bed"/>
-        <Resource path="http://hgdownload.soe.ucsc.edu/gbdb/hg38/snp/dbSnp155Common.bb" type="bb"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/refGene_withExon1ofP14ModifiedByElena.txt.gz" type="refgene"/>
-    </Resources>
     <Panel height="587" name="DataPanel" width="1683">
         <Track attributeKey="dbSnp155Common.bb" clazz="org.broad.igv.track.FeatureTrack" color="102,102,102" featureVisibilityWindow="2150246" fontSize="10" groupByStrand="false" height="50" id="http://hgdownload.soe.ucsc.edu/gbdb/hg38/snp/dbSnp155Common.bb" name="dbSnp155Common.bb" visible="true"/>
         <Track attributeKey="hg38.phastCons100way.bw" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" colorScale="ContinuousColorScale;0.0;0.0;0.0;1.0;255,255,255;255,255,255;0,51,0" fontSize="10" id="https://hgdownload.soe.ucsc.edu/goldenPath/hg38/phastCons100way/hg38.phastCons100way.bw" name="hg38.phastCons100way.bw" renderer="HEATMAP" visible="true" windowFunction="mean">

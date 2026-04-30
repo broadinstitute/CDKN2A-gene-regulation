@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Session genome="hg38" locus="chr9:21719791-22202087" nextAutoscaleGroup="5" version="8">
-    <Resources>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_P15_chr9_res500.wig" type="wig"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL33_hg38.CPM.bw" type="bw"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_P16_chr9_res500.wig" type="wig"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy.bed" type="bed"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_P14_chr9_res500.wig" type="wig"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL33_hg38.CPM.bw" type="bw"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz" type="refgene"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/RCMC_loops_merged_hiccups.bedpe" type="bedpe"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E1_chr9_res500.wig" type="wig"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL54_hg38.CPM.bw" type="bw"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw" type="bw"/>
-    </Resources>
     <Panel height="650" name="DataPanel" width="1422">
         <Track arcOption="ALL" attributeKey="RCMC loops merged_hiccups.bedpe" autoscale="true" clazz="org.broad.igv.bedpe.InteractionTrack" color="180,25,137" direction="UP" fontSize="10" graphType="NESTED_ARC" height="250" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/RCMC_loops_merged_hiccups.bedpe" name="RCMC loops merged_hiccups.bedpe" showBlocks="true" thickness="1" visible="true"/>
         <Track attributeKey="CTCF_PDL33_hg38.CPM.bw" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL33_hg38.CPM.bw" name="CTCF_PDL33_hg38.CPM.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
