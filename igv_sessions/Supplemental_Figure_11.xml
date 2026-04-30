@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Session genome="hg38" locus="chr9:21898366-22118856" nextAutoscaleGroup="4" version="8">
+    <Resources>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/GRCh38-ccREs.bed" type="bed"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL33_hg38.CPM.bw" type="bw"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL33_hg38.CPM.bw" type="bw"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/ATAC-seq_bulk_bams/CPM_Norm/PDL20_TP1_omni_A.shift.sorted.CPM.bw" type="bw"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz" type="refgene"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/target_regions.bed" type="bed"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL54_hg38.CPM.bw" type="bw"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/ATAC-seq_bulk_bams/CPM_Norm/PDL50_TP7_omni_A.shift.sorted.CPM.bw" type="bw"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw" type="bw"/>
+    </Resources>
+    <Panel height="512" name="DataPanel" width="1422">
+        <Track attributeKey="CTCF_PDL33_hg38.CPM.bw" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL33_hg38.CPM.bw" name="CTCF_PDL33_hg38.CPM.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="8.15592" minimum="0.0" type="LINEAR"/>
+        </Track>
+        <Track attributeKey="CTCF_PDL54_hg38.CPM.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL54_hg38.CPM.bw" name="CTCF_PDL54_hg38.CPM.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="2.0" minimum="0.0" type="LINEAR"/>
+        </Track>
+        <Track attributeKey="H3K27ac_PDL33_hg38.CPM.bw" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="102,102,102" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL33_hg38.CPM.bw" name="H3K27ac_PDL33_hg38.CPM.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="1.87388" minimum="0.0" type="LINEAR"/>
+        </Track>
+        <Track attributeKey="H3K27ac_PDL54_hg38.CPM.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="102,102,102" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw" name="H3K27ac_PDL54_hg38.CPM.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="2.0" minimum="0.0" type="LINEAR"/>
+        </Track>
+        <Track attributeKey="PDL20_TP1_omni_A.shift.sorted.CPM.bw" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ATAC-seq_bulk_bams/CPM_Norm/PDL20_TP1_omni_A.shift.sorted.CPM.bw" name="PDL20_TP1_omni_A.shift.sorted.CPM.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="4.5485" minimum="0.0" type="LINEAR"/>
+        </Track>
+        <Track attributeKey="PDL50_TP7_omni_A.shift.sorted.CPM.bw" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ATAC-seq_bulk_bams/CPM_Norm/PDL50_TP7_omni_A.shift.sorted.CPM.bw" name="PDL50_TP7_omni_A.shift.sorted.CPM.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="2.95389" minimum="0.0" type="LINEAR"/>
+        </Track>
+        <Track attributeKey="ENCODE CRES-GRCh38-ccREs_4IGV.bed" clazz="org.broad.igv.track.FeatureTrack" color="0,153,0" fontSize="10" groupByStrand="false" id="/Users/egaskell/Documents/Calico p16/9p21 gene regulation manuscript/IGV sessions /Revised version/Final Revised IGVF sessions /ENCODE CRES-GRCh38-ccREs_4IGV.bed" name="ENCODE CRES-GRCh38-ccREs_4IGV.bed" visible="true"/>
+        <Track attributeKey="target_regions.bed" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" colorScale="ContinuousColorScale;0.0;173.0;255,255,255;0,0,0" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/target_regions.bed" name="Screen target regions" visible="true"/>
+        <Track attributeKey="refGene_CDKN2AvB.txt.gz" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz" name="refGene_CDKN2AvB.txt.gz" visible="true"/>
+    </Panel>
+    <Panel height="64" name="FeaturePanel" width="1422">
+        <Track attributeKey="Reference sequence" clazz="org.broad.igv.track.SequenceTrack" fontSize="10" id="Reference sequence" name="Reference sequence" sequenceTranslationStrandValue="+" shouldShowTranslation="false" visible="true"/>
+    </Panel>
+    <PanelLayout dividerFractions="0.8816466552315609"/>
+    <HiddenAttributes>
+        <Attribute name="DATA FILE"/>
+        <Attribute name="DATA TYPE"/>
+        <Attribute name="NAME"/>
+    </HiddenAttributes>
+</Session>

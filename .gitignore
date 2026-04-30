@@ -36,6 +36,9 @@ __pycache__/
 *.xlsx
 Torlai Triglia*.md
 
+# Local download artifacts
+IGV sessions for figures-*.zip
+
 # Large output files
 *.pdf
 *.svg
@@ -56,7 +59,7 @@ Bing_Ren_ATAC/
 
 # Misc
 *.xml
-!CDKN2A_CDKN2B_9p21.xml
+!igv_sessions/*.xml
 first_part
 listing
 gnames
