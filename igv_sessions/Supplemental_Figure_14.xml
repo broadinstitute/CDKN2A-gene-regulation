@@ -6,7 +6,7 @@
         <Resource path="http://hgdownload.soe.ucsc.edu/gbdb/hg38/snp/dbSnp155Common.bb" type="bb"/>
         <Resource path="https://storage.googleapis.com/broad-p16-calico/refGene_withExon1ofP14ModifiedByElena.txt.gz" type="refgene"/>
     </Resources>
-    <Panel height="587" name="DataPanel" width="1683">
+    <Panel name="DataPanel">
         <Track attributeKey="dbSnp155Common.bb" clazz="org.broad.igv.track.FeatureTrack" color="102,102,102" featureVisibilityWindow="2150246" fontSize="10" groupByStrand="false" height="50" id="http://hgdownload.soe.ucsc.edu/gbdb/hg38/snp/dbSnp155Common.bb" name="dbSnp155Common.bb" visible="true"/>
         <Track attributeKey="hg38.phastCons100way.bw" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" colorScale="ContinuousColorScale;0.0;0.0;0.0;1.0;255,255,255;255,255,255;0,51,0" fontSize="10" id="https://hgdownload.soe.ucsc.edu/goldenPath/hg38/phastCons100way/hg38.phastCons100way.bw" name="hg38.phastCons100way.bw" renderer="HEATMAP" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="1.0" minimum="0.0" type="LINEAR"/>
@@ -14,7 +14,7 @@
         <Track attributeKey="target_regions.validated.tidy.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy.bed" name="target_regions.validated.tidy.bed" visible="true"/>
         <Track attributeKey="refGene_withExon1ofP14ModifiedByElena.txt.gz" clazz="org.broad.igv.track.FeatureTrack" color="102,102,102" colorScale="ContinuousColorScale;0.0;507.0;255,255,255;102,102,102" displayMode="SQUISHED" fontSize="10" groupByStrand="false" height="50" id="https://storage.googleapis.com/broad-p16-calico/refGene_withExon1ofP14ModifiedByElena.txt.gz" name="Genes" visible="true"/>
     </Panel>
-    <Panel height="64" name="FeaturePanel" width="1683">
+    <Panel name="FeaturePanel">
         <Track attributeKey="Reference sequence" clazz="org.broad.igv.track.SequenceTrack" fontSize="10" id="Reference sequence" name="Reference sequence" sequenceTranslationStrandValue="+" shouldShowTranslation="false" visible="true"/>
     </Panel>
     <PanelLayout dividerFractions="0.8816466552315609"/>
