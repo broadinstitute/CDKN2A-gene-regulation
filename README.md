@@ -26,7 +26,7 @@ To distinguish p14ARF and p16INK4A in single-cell expression data, we generated 
 | Fig 2 | Cell type expression from 5’ scRNA-seq | Notebooks in [`scRNA_5prime/`](#deconvolution-of-cdkn2a-in-5-scrna-seq-fig-2) |
 | Fig 3 | p16/p14 enrichment from 3’ libraries | [`Figure_3C_expanded.py`](#enrichment-of-p16-and-p14-from-3-single-cell-libraries-fig-3), `Brugge_comparison.ipynb`, `Brugge_umaps_dotplot.ipynb` |
 | Fig 4 | WI-38 replicative senescence switch | Notebooks in [`scRNA_dialup/`](#p14-to-p16-switch-during-replicative-senescence-fig-4) |
-| Fig 5 | RCMC and epigenomic landscape | [`microC_juicer_commands.sh`](#region-capture-micro-c-and-epigenomic-landscape-fig-5-7), `plotGardener_Wi38_*.R` |
+| Fig 5 | RCMC and epigenomic landscape | [`microC_juicer_commands.sh`](#region-capture-micro-c-and-epigenomic-landscape-fig-5-7), `plotGardener_Wi38_*.R`, `Plotgardener_PDL.R` |
 | Fig 6 | CRISPRa screen and validation | [`screen_sceptre_original.R`](#crispra-screen-fig-6), `screen_processing.R`, `write_bedGraph.R`, `senmayo_safeharbor_E1.R` |
 | Fig 7 | CRE characterization, virtual 4C, tissue accessibility | [`extract_virtual_4C.py`](#region-capture-micro-c-and-epigenomic-landscape-fig-5-7), `Plotgardener_PDL.R` |
 
@@ -68,7 +68,6 @@ Analysis of the WI-38 Hayflick limit time-course (Chan et al. 2022, GSE175533):
 ### Region Capture Micro-C and epigenomic landscape (Fig 5, 7)
 
 - [microC_juicer_commands.sh](microC_juicer_commands.sh) — commands for creating .hic files, calling loops with [HiCCUPS](https://github.com/aidenlab/juicer/wiki/HiCCUPS), and calling differential loops
-- [microC.R](microC.R) — DESeq-based differential contact analysis
 - [extract_virtual_4C.py](extract_virtual_4C.py) — generates virtual 4C profiles from merged .hic files using hicstraw
 - [plotGardener_Wi38_late_min_early_chr9_21750000_22500000_with_isoforms.R](plotGardener_Wi38_late_min_early_chr9_21750000_22500000_with_isoforms.R) — 750kb view of the locus
 - [plotGardener_Wi38_late_min_early_chr9_20300000_22600000_with_isoforms.R](plotGardener_Wi38_late_min_early_chr9_20300000_22600000_with_isoforms.R) — 2.3Mb view

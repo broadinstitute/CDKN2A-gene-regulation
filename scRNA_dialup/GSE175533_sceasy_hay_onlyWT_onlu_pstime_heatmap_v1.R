@@ -1,5 +1,3 @@
-setwd('/Volumes/etorlait/p16/Published_Data/Chan_et_al_2022_eLife/scRNAseq/')
-
 a=read.delim('GSE175533_sceasy_hay_onlyWT_redoUMAP_onlu_pstime_table_for_heatmap_newSignScores.txt', sep='\t')
 
 library(ComplexHeatmap)
