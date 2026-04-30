@@ -1,0 +1,81 @@
+{
+  "genome": "hg38",
+  "locus": "chr9:21898366-22118856",
+  "tracks": [
+    {
+      "name": "CTCF_PDL33_hg38.CPM.bw",
+      "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL33_hg38.CPM.bw",
+      "format": "bigwig",
+      "color": "rgb(0,0,0)",
+      "autoscale": true,
+      "windowFunction": "mean",
+      "min": 0.0,
+      "max": 8.15592
+    },
+    {
+      "name": "CTCF_PDL54_hg38.CPM.bw",
+      "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL54_hg38.CPM.bw",
+      "format": "bigwig",
+      "color": "rgb(0,0,0)",
+      "autoscale": false,
+      "windowFunction": "mean",
+      "min": 0.0,
+      "max": 2.0
+    },
+    {
+      "name": "H3K27ac_PDL33_hg38.CPM.bw",
+      "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL33_hg38.CPM.bw",
+      "format": "bigwig",
+      "color": "rgb(102,102,102)",
+      "autoscale": true,
+      "windowFunction": "mean",
+      "min": 0.0,
+      "max": 1.87388
+    },
+    {
+      "name": "H3K27ac_PDL54_hg38.CPM.bw",
+      "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw",
+      "format": "bigwig",
+      "color": "rgb(102,102,102)",
+      "autoscale": false,
+      "windowFunction": "mean",
+      "min": 0.0,
+      "max": 2.0
+    },
+    {
+      "name": "PDL20_TP1_omni_A.shift.sorted.CPM.bw",
+      "url": "https://storage.googleapis.com/broad-p16-calico/ATAC-seq_bulk_bams/CPM_Norm/PDL20_TP1_omni_A.shift.sorted.CPM.bw",
+      "format": "bigwig",
+      "autoscale": true,
+      "windowFunction": "mean",
+      "min": 0.0,
+      "max": 4.5485
+    },
+    {
+      "name": "PDL50_TP7_omni_A.shift.sorted.CPM.bw",
+      "url": "https://storage.googleapis.com/broad-p16-calico/ATAC-seq_bulk_bams/CPM_Norm/PDL50_TP7_omni_A.shift.sorted.CPM.bw",
+      "format": "bigwig",
+      "autoscale": true,
+      "windowFunction": "mean",
+      "min": 0.0,
+      "max": 2.95389
+    },
+    {
+      "name": "ENCODE CRES-GRCh38-ccREs_4IGV.bed",
+      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/GRCh38-ccREs.bed",
+      "format": "bed",
+      "color": "rgb(0,153,0)"
+    },
+    {
+      "name": "Screen target regions",
+      "url": "https://storage.googleapis.com/broad-p16-calico/target_regions.bed",
+      "format": "bed",
+      "color": "rgb(0,0,0)"
+    },
+    {
+      "name": "refGene_CDKN2AvB.txt.gz",
+      "url": "https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz",
+      "format": "refgene"
+    }
+  ]
+}

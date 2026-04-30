@@ -1,0 +1,55 @@
+{
+  "genome": "hg38",
+  "locus": "chr9:22020596-22198609",
+  "tracks": [
+    {
+      "name": "CTCF_PDL54_hg38.CPM.bw",
+      "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL54_hg38.CPM.bw",
+      "format": "bigwig",
+      "color": "rgb(0,0,0)",
+      "autoscale": false,
+      "windowFunction": "mean",
+      "min": 0.0,
+      "max": 2.0
+    },
+    {
+      "name": "H3K27ac_PDL54_hg38.CPM.bw",
+      "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw",
+      "format": "bigwig",
+      "color": "rgb(102,102,102)",
+      "autoscale": false,
+      "windowFunction": "mean",
+      "min": 0.0,
+      "max": 2.0
+    },
+    {
+      "name": "PDL50_target_regions.validated.tidy2_contributions.counts_scores.bw",
+      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/PDL50_target_regions.validated.tidy2_contributions.counts_scores.bw",
+      "format": "bigwig",
+      "autoscale": false,
+      "windowFunction": "mean",
+      "min": 0.0,
+      "max": 0.05
+    },
+    {
+      "name": "target_regions.validated.tidy2.chromBPnetRegions.bed",
+      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy2.chromBPnetRegions.bed",
+      "format": "bed"
+    },
+    {
+      "name": "refGene_CDKN2AvB.txt.gz",
+      "url": "https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz",
+      "format": "refgene"
+    },
+    {
+      "name": "ENCFF906BPJ.bigWig",
+      "url": "https://www.encodeproject.org/files/ENCFF906BPJ/@@download/ENCFF906BPJ.bigWig",
+      "format": "bigwig",
+      "color": "rgb(0,153,0)",
+      "autoscale": false,
+      "windowFunction": "mean",
+      "min": 0.0,
+      "max": 10.0
+    }
+  ]
+}

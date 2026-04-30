@@ -96,18 +96,18 @@ The CRISPRa screen used [SCEPTRE](https://katsevich-lab.github.io/sceptre/index.
 
 | Figure | One-click in browser | Session XML |
 |---|---|---|
-| Fig 5B | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FFigure_5B.xml) | [`Figure_5B.xml`](igv_sessions/Figure_5B.xml) |
-| Fig 6B-C | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FFigure_6B-C.xml) | [`Figure_6B-C.xml`](igv_sessions/Figure_6B-C.xml) |
-| Fig 6F | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FFigure_6F.xml) | [`Figure_6F.xml`](igv_sessions/Figure_6F.xml) |
-| Fig 7A | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FFigure_7A.xml) | [`Figure_7A.xml`](igv_sessions/Figure_7A.xml) |
-| Suppl Fig 11 | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_11.xml) | [`Supplemental_Figure_11.xml`](igv_sessions/Supplemental_Figure_11.xml) |
-| Suppl Fig 13 | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_13.xml) | [`Supplemental_Figure_13.xml`](igv_sessions/Supplemental_Figure_13.xml) |
-| Suppl Fig 14 | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_14.xml) | [`Supplemental_Figure_14.xml`](igv_sessions/Supplemental_Figure_14.xml) |
-| Suppl Fig 15A | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_15A.xml) | [`Supplemental_Figure_15A.xml`](igv_sessions/Supplemental_Figure_15A.xml) |
-| Suppl Fig 15B | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_15B.xml) | [`Supplemental_Figure_15B.xml`](igv_sessions/Supplemental_Figure_15B.xml) |
-| Suppl Fig 18 | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_18.xml) | [`Supplemental_Figure_18.xml`](igv_sessions/Supplemental_Figure_18.xml) |
+| Fig 5B | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FFigure_5B.json) | [`Figure_5B.xml`](igv_sessions/Figure_5B.xml) |
+| Fig 6B-C | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FFigure_6B-C.json) | [`Figure_6B-C.xml`](igv_sessions/Figure_6B-C.xml) |
+| Fig 6F | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FFigure_6F.json) | [`Figure_6F.xml`](igv_sessions/Figure_6F.xml) |
+| Fig 7A | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FFigure_7A.json) | [`Figure_7A.xml`](igv_sessions/Figure_7A.xml) |
+| Suppl Fig 11 | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_11.json) | [`Supplemental_Figure_11.xml`](igv_sessions/Supplemental_Figure_11.xml) |
+| Suppl Fig 13 | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_13.json) | [`Supplemental_Figure_13.xml`](igv_sessions/Supplemental_Figure_13.xml) |
+| Suppl Fig 14 | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_14.json) | [`Supplemental_Figure_14.xml`](igv_sessions/Supplemental_Figure_14.xml) |
+| Suppl Fig 15A | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_15A.json) | [`Supplemental_Figure_15A.xml`](igv_sessions/Supplemental_Figure_15A.xml) |
+| Suppl Fig 15B | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_15B.json) | [`Supplemental_Figure_15B.xml`](igv_sessions/Supplemental_Figure_15B.xml) |
+| Suppl Fig 18 | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_18.json) | [`Supplemental_Figure_18.xml`](igv_sessions/Supplemental_Figure_18.xml) |
 
-XMLs can also be opened directly in [IGV desktop](https://igv.org/). All track URLs in each session are publicly hosted at `gs://broad-p16-calico/`.
+The XMLs in the table can also be opened directly in [IGV desktop](https://igv.org/). The "Open in IGV web app" links use a native IGV.js JSON session (also under [`igv_sessions/`](igv_sessions/)) since the web app's XML translation layer doesn't support every IGV desktop feature. Both formats reference the same publicly-hosted tracks at `gs://broad-p16-calico/`.
 
 ## Reproducing from GEO
 

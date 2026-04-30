@@ -1,0 +1,76 @@
+{
+  "genome": "hg38",
+  "locus": "chr9:21898366-22118856",
+  "tracks": [
+    {
+      "name": "CTCF_PDL54_hg38.CPM.bw",
+      "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL54_hg38.CPM.bw",
+      "format": "bigwig",
+      "color": "rgb(0,0,0)",
+      "autoscale": false,
+      "windowFunction": "mean",
+      "min": 0.0,
+      "max": 2.0
+    },
+    {
+      "name": "H3K27ac_PDL54_hg38.CPM.bw",
+      "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw",
+      "format": "bigwig",
+      "color": "rgb(102,102,102)",
+      "autoscale": false,
+      "windowFunction": "mean",
+      "min": 0.0,
+      "max": 2.0
+    },
+    {
+      "name": "p16 CRISPRa",
+      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_p16.dialup.bedGraph",
+      "format": "bedgraph",
+      "autoscale": false,
+      "windowFunction": "mean",
+      "min": 0.0,
+      "max": 10.0
+    },
+    {
+      "name": "p14 CRISPRa",
+      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_p14.dialup.bedGraph",
+      "format": "bedgraph",
+      "color": "rgb(0,153,0)",
+      "autoscale": false,
+      "windowFunction": "mean",
+      "min": 0.0,
+      "max": 10.0
+    },
+    {
+      "name": "ANRIL CRISPRa",
+      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_CDKN2B-AS1.bedGraph",
+      "format": "bedgraph",
+      "color": "rgb(153,51,255)",
+      "autoscale": false,
+      "windowFunction": "mean",
+      "min": 0.0,
+      "max": 10.0
+    },
+    {
+      "name": "p15 CRISPRa",
+      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_CDKN2B.bedGraph",
+      "format": "bedgraph",
+      "color": "rgb(255,51,51)",
+      "autoscale": false,
+      "windowFunction": "mean",
+      "min": 0.0,
+      "max": 10.0
+    },
+    {
+      "name": "Screen target regions",
+      "url": "https://storage.googleapis.com/broad-p16-calico/target_regions.bed",
+      "format": "bed",
+      "color": "rgb(0,0,0)"
+    },
+    {
+      "name": "refGene_CDKN2AvB.txt.gz",
+      "url": "https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz",
+      "format": "refgene"
+    }
+  ]
+}
