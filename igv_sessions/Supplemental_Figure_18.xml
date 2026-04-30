@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Session genome="hg38" locus="chr9:21849998-22450000" nextAutoscaleGroup="2" version="8">
+    <Resources>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_p14.dialup.bedGraph" type="bedgraph"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_CDKN2B-AS1.bedGraph" type="bedgraph"/>
+        <Resource name="ENCFF860GGZ.bigWig" path="https://www.encodeproject.org/files/ENCFF860GGZ/@@download/ENCFF860GGZ.bigWig" type="bigwig"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy.bed" type="bed"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/refGene_withExon1ofP14ModifiedByElena.txt.gz" type="refgene"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_CDKN2B.bedGraph" type="bedgraph"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/target_regions.bed" type="bed"/>
+        <Resource name="ENCFF850RSK.bigWig" path="https://www.encodeproject.org/files/ENCFF850RSK/@@download/ENCFF850RSK.bigWig" type="bigwig"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw" type="bw"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/Farooq_KO_Regions_Enhancers.bed" type="bed"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_p16.dialup.bedGraph" type="bedgraph"/>
+    </Resources>
     <Panel height="1800" name="DataPanel" width="1422">
         <Track attributeKey="H3K27ac_PDL54_hg38.CPM.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="102,102,102" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw" name="WI-38 H3K27ac_PDL54.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="2.0" minimum="0.0" type="LINEAR"/>

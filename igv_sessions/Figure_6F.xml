@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Session genome="hg38" locus="chr9:22020596-22198609" nextAutoscaleGroup="4" version="8">
+    <Resources>
+        <Resource name="ENCFF906BPJ.bigWig" path="https://www.encodeproject.org/files/ENCFF906BPJ/@@download/ENCFF906BPJ.bigWig" type="bigwig"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/PDL50_target_regions.validated.tidy2_contributions.counts_scores.bw" type="bw"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz" type="refgene"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy2.chromBPnetRegions.bed" type="bed"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL54_hg38.CPM.bw" type="bw"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw" type="bw"/>
+    </Resources>
     <Panel height="544" name="DataPanel" width="1128">
         <Track attributeKey="CTCF_PDL54_hg38.CPM.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL54_hg38.CPM.bw" name="CTCF_PDL54_hg38.CPM.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="2.0" minimum="0.0" type="LINEAR"/>
