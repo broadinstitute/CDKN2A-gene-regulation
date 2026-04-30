@@ -57,6 +57,7 @@ Other tracks used-*.zip
 !expression_ratios.csv
 !heatmap_data_Brugge.csv
 !data/CRISPRa_target_regions.bed
+!Wi38_calico_ATAC-seq.csv
 Bing_Ren_ATAC/
 
 # Misc

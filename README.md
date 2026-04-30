@@ -77,6 +77,7 @@ Analysis of the WI-38 Hayflick limit time-course (Chan et al. 2022, GSE175533):
 
 The 173 target regions for the CRISPRa screen were selected from a DiffBind/DESeq2 analysis of the [Chan et al. 2022](https://elifesciences.org/articles/70283) WI-38 ATAC-seq time-course (PDL50 vs each other timepoint, FDR≤0.05, |log2FC|≥log2(1.5)) plus manual inclusion of ENCODE cCREs and fine-mapped GWAS variants in the 9p21 TAD. See Methods §"Selection of regions for CRISPRa screen experiment" for the full criteria.
 
+- [`DiffBind_ATAC-seq.R`](DiffBind_ATAC-seq.R) — DiffBind analysis driving the DAR selection. Reads [`Wi38_calico_ATAC-seq.csv`](Wi38_calico_ATAC-seq.csv) (sample sheet) and BAM/MACS2 outputs from the upstream ATAC-seq processing (not in this repo; see "Analyses not in this repo" below).
 - [`data/CRISPRa_target_regions.bed`](data/CRISPRa_target_regions.bed) — 173 regions with manual DAR-type annotations (`Inc_seems-like`, `Dec_seems-like`, etc.) used as targets for the screen.
 
 The CRISPRa screen used [SCEPTRE](https://katsevich-lab.github.io/sceptre/index.html) for statistical analysis of single-cell CRISPR perturbations (High MOI).
