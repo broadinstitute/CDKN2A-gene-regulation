@@ -1,49 +1,9 @@
 {
   "genome": "hg38",
-  "locus": "chr9:21719790-22202087",
+  "locus": "chr9:21800000-22225000",
   "tracks": [
     {
-      "name": "CTCF_PDL33_hg38.CPM.bw",
-      "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL33_hg38.CPM.bw",
-      "format": "bigwig",
-      "color": "rgb(0,0,0)",
-      "autoscale": true,
-      "windowFunction": "mean",
-      "min": 0.0,
-      "max": 4.8420787
-    },
-    {
-      "name": "CTCF_PDL54_hg38.CPM.bw",
-      "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL54_hg38.CPM.bw",
-      "format": "bigwig",
-      "color": "rgb(0,0,0)",
-      "autoscale": false,
-      "windowFunction": "mean",
-      "min": 0.0,
-      "max": 2.0
-    },
-    {
-      "name": "H3K27ac_PDL33_hg38.CPM.bw",
-      "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL33_hg38.CPM.bw",
-      "format": "bigwig",
-      "color": "rgb(102,102,102)",
-      "autoscale": true,
-      "windowFunction": "mean",
-      "min": 0.0,
-      "max": 1.4238352
-    },
-    {
-      "name": "H3K27ac_PDL54_hg38.CPM.bw",
-      "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw",
-      "format": "bigwig",
-      "color": "rgb(102,102,102)",
-      "autoscale": false,
-      "windowFunction": "mean",
-      "min": 0.0,
-      "max": 2.0
-    },
-    {
-      "name": "Virtual_4C_E1_PDL21",
+      "name": "Virtual 4C - E1, PDL21",
       "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E1_PDL21_chr9_res500.wig",
       "format": "wig",
       "color": "rgb(0,0,0)",
@@ -53,7 +13,7 @@
       "max": 10.0
     },
     {
-      "name": "Virtual_4C_E1_PDL48_Rep2",
+      "name": "Virtual 4C - E1, PDL48",
       "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E1_PDL48_Rep2_chr9_res500.wig",
       "format": "wig",
       "color": "rgb(0,0,0)",
@@ -63,7 +23,7 @@
       "max": 10.0
     },
     {
-      "name": "Virtual_4C_P16_PDL21",
+      "name": "Virtual 4C - p16, PDL21",
       "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_P16_PDL21_chr9_res500.wig",
       "format": "wig",
       "color": "rgb(0,0,0)",
@@ -73,7 +33,7 @@
       "max": 10.0
     },
     {
-      "name": "Virtual_4C_P16_PDL48_Rep2",
+      "name": "Virtual 4C - p16, PDL48",
       "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_P16_PDL48_Rep2_chr9_res500.wig",
       "format": "wig",
       "color": "rgb(0,0,0)",
@@ -83,7 +43,7 @@
       "max": 10.0
     },
     {
-      "name": "Virtual_4C_P14_ANRIL_PDL21",
+      "name": "Virtual 4C - p14/ANRIL, PDL21",
       "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_P14_ANRIL_PDL21_chr9_res500.wig",
       "format": "wig",
       "color": "rgb(0,0,0)",
@@ -93,7 +53,7 @@
       "max": 10.0
     },
     {
-      "name": "Virtual_4C_P14_ANRIL_PDL48_Rep2",
+      "name": "Virtual 4C - p14/ANRIL, PDL48",
       "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_P14_ANRIL_PDL48_Rep2_chr9_res500.wig",
       "format": "wig",
       "color": "rgb(0,0,0)",
@@ -103,7 +63,7 @@
       "max": 10.0
     },
     {
-      "name": "Virtual_4C_P15_PDL21",
+      "name": "Virtual 4C - p15, PDL21",
       "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_P15_PDL21_chr9_res500.wig",
       "format": "wig",
       "color": "rgb(0,0,0)",
@@ -113,7 +73,7 @@
       "max": 10.0
     },
     {
-      "name": "Virtual_4C_P15_PDL48_Rep2",
+      "name": "Virtual 4C - p15, PDL48",
       "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_P15_PDL48_Rep2_chr9_res500.wig",
       "format": "wig",
       "color": "rgb(0,0,0)",
@@ -123,14 +83,15 @@
       "max": 10.0
     },
     {
-      "name": "refGene_CDKN2AvB.txt.gz",
-      "url": "https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz",
-      "format": "refgene"
+      "name": "Validated regions",
+      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy2.bed",
+      "format": "bed"
     },
     {
-      "name": "target_regions.validated.tidy.bed",
-      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy.bed",
-      "format": "bed"
-    }
-  ]
+      "name": "Gene track - modified",
+      "url": "https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz",
+      "format": "refgene",
+      "height": 100,
+      "displayMode": "EXPANDED"
+    }  ]
 }

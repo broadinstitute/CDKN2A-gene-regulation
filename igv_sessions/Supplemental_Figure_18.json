@@ -1,9 +1,9 @@
 {
   "genome": "hg38",
-  "locus": "chr9:21849998-22450000",
+  "locus": "chr9:22074747-22197058",
   "tracks": [
     {
-      "name": "WI-38 H3K27ac_PDL54.bw",
+      "name": "Wi-38 H3K27ac PDL54 CPM",
       "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw",
       "format": "bigwig",
       "color": "rgb(102,102,102)",
@@ -13,7 +13,7 @@
       "max": 2.0
     },
     {
-      "name": "Hela H3K27ac (ENCODE)",
+      "name": "Hela H3K27ac ENCFF850RSK",
       "url": "https://www.encodeproject.org/files/ENCFF850RSK/@@download/ENCFF850RSK.bigWig",
       "format": "bigwig",
       "color": "rgb(200,0,0)",
@@ -23,17 +23,23 @@
       "max": 50.0
     },
     {
-      "name": "Hela H3K4me1 (ENCODE)",
+      "name": "Hela H3K4me1 ENCFF860GGZ",
       "url": "https://www.encodeproject.org/files/ENCFF860GGZ/@@download/ENCFF860GGZ.bigWig",
       "format": "bigwig",
       "color": "rgb(0,150,0)",
-      "autoscale": true,
+      "autoscale": false,
       "windowFunction": "mean",
       "min": 0.0,
-      "max": 13.977658
+      "max": 14
     },
     {
-      "name": "Farooq_KORegions",
+      "name": "Putative CREs Farooq et al",
+      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/Harismendy_Farooq_All_Enhancers_LiftOver_hg38_withManualAnnotation.bed",
+      "format": "bed",
+      "displayMode": "EXPANDED"
+    },
+    {
+      "name": "KO Regions Farooq et al",
       "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/Farooq_KO_Regions_Enhancers.bed",
       "format": "bed",
       "displayMode": "EXPANDED"
@@ -44,22 +50,21 @@
       "format": "bed"
     },
     {
-      "name": "target_regions.validated.tidy.bed",
-      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy.bed",
+      "name": "Validated regions",
+      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy2.bed",
       "format": "bed"
     },
     {
-      "name": "sceptre_guides_new_version_mixture_corrected_p16.dialup.bedGraph",
+      "name": "p16 CRISPRa",
       "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_p16.dialup.bedGraph",
       "format": "bedgraph",
-      "color": "rgb(0,0,178)",
       "autoscale": false,
       "windowFunction": "mean",
       "min": 0.0,
       "max": 10.0
     },
     {
-      "name": "sceptre_guides_new_version_mixture_corrected_p14.dialup.bedGraph",
+      "name": "p14 CRISPRa",
       "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_p14.dialup.bedGraph",
       "format": "bedgraph",
       "color": "rgb(0,153,0)",
@@ -69,30 +74,30 @@
       "max": 10.0
     },
     {
-      "name": "sceptre_guides_new_version_mixture_corrected_CDKN2B-AS1.bedGraph",
+      "name": "ANRIL CRISPRa",
       "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_CDKN2B-AS1.bedGraph",
       "format": "bedgraph",
-      "color": "rgb(153,0,204)",
+      "color": "rgb(153,51,255)",
       "autoscale": false,
       "windowFunction": "mean",
       "min": 0.0,
       "max": 10.0
     },
     {
-      "name": "sceptre_guides_new_version_mixture_corrected_CDKN2B.bedGraph",
+      "name": "p15 CRISPRa",
       "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_CDKN2B.bedGraph",
       "format": "bedgraph",
-      "color": "rgb(255,0,0)",
+      "color": "rgb(255,51,51)",
       "autoscale": false,
       "windowFunction": "mean",
       "min": 0.0,
       "max": 10.0
     },
     {
-      "name": "refGene_withExon1ofP14ModifiedByElena.txt.gz",
-      "url": "https://storage.googleapis.com/broad-p16-calico/refGene_withExon1ofP14ModifiedByElena.txt.gz",
+      "name": "Gene track - modified",
+      "url": "https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz",
       "format": "refgene",
+      "height": 100,
       "displayMode": "EXPANDED"
-    }
-  ]
+    }  ]
 }

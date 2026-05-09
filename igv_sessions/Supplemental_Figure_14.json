@@ -3,33 +3,41 @@
   "locus": "chr9:22105461-22117361",
   "tracks": [
     {
-      "name": "dbSnp155Common.bb",
-      "url": "http://hgdownload.soe.ucsc.edu/gbdb/hg38/snp/dbSnp155Common.bb",
-      "format": "bigwig",
+      "name": "Validated regions",
+      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy2.bed",
+      "format": "bed"
+    },
+    {
+      "name": "dbSnp155Common - UCSC Browser",
+      "url": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/snp/dbSnp155Common.bb",
+      "format": "bigbed",
       "color": "rgb(102,102,102)",
       "height": 50
     },
-    {
-      "name": "hg38.phastCons100way.bw",
+     {
+      "name": "phastCons100way - UCSC Browser",
       "url": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/phastCons100way/hg38.phastCons100way.bw",
       "format": "bigwig",
       "autoscale": true,
       "windowFunction": "mean",
-      "min": 0.0,
-      "max": 1.0
+      "min": 0,
+      "max": 1,
+      "type": "wig",
+      "graphType": "heatmap",
+      "colorScale": {
+       "type": "gradient",
+       "min": 0,
+       "max": 1,
+       "minColor": "rgb(255,255,255)",
+       "maxColor": "rgb(0,100,0)"
+     }
     },
     {
-      "name": "target_regions.validated.tidy.bed",
-      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy.bed",
-      "format": "bed"
-    },
-    {
-      "name": "Genes",
-      "url": "https://storage.googleapis.com/broad-p16-calico/refGene_withExon1ofP14ModifiedByElena.txt.gz",
+      "name": "Gene track - modified",
+      "url": "https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz",
       "format": "refgene",
-      "color": "rgb(102,102,102)",
-      "height": 50,
-      "displayMode": "SQUISHED"
+      "height": 100,
+      "displayMode": "EXPANDED"
     }
-  ]
+]
 }

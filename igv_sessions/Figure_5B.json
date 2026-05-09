@@ -3,7 +3,7 @@
   "locus": "chr9:21749998-22500000",
   "tracks": [
     {
-      "name": "CTCF_PDL33_hg38.CPM.bw",
+      "name": "CTCF PDL33 CPM",
       "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL33_hg38.CPM.bw",
       "format": "bigwig",
       "color": "rgb(0,0,0)",
@@ -13,7 +13,7 @@
       "max": 2.0
     },
     {
-      "name": "CTCF_PDL54_hg38.CPM.bw",
+      "name": "CTCF PDL54 CPM",
       "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL54_hg38.CPM.bw",
       "format": "bigwig",
       "color": "rgb(0,0,0)",
@@ -23,7 +23,7 @@
       "max": 2.0
     },
     {
-      "name": "H3K27ac_PDL33_hg38.CPM.bw",
+      "name": "H3K27ac PDL33 CPM",
       "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL33_hg38.CPM.bw",
       "format": "bigwig",
       "color": "rgb(102,102,102)",
@@ -33,7 +33,7 @@
       "max": 2.0
     },
     {
-      "name": "H3K27ac_PDL54_hg38.CPM.bw",
+      "name": "H3K27ac PDL54 CPM",
       "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw",
       "format": "bigwig",
       "color": "rgb(102,102,102)",
@@ -43,7 +43,7 @@
       "max": 2.0
     },
     {
-      "name": "PDL20_TP1_omni_A.shift.sorted.CPM.bw",
+      "name": "ATAC PDL20 CPM",
       "url": "https://storage.googleapis.com/broad-p16-calico/ATAC-seq_bulk_bams/CPM_Norm/PDL20_TP1_omni_A.shift.sorted.CPM.bw",
       "format": "bigwig",
       "autoscale": false,
@@ -52,7 +52,7 @@
       "max": 2.0
     },
     {
-      "name": "PDL50_TP7_omni_A.shift.sorted.CPM.bw",
+      "name": "ATAC PDL50 CPM",
       "url": "https://storage.googleapis.com/broad-p16-calico/ATAC-seq_bulk_bams/CPM_Norm/PDL50_TP7_omni_A.shift.sorted.CPM.bw",
       "format": "bigwig",
       "autoscale": false,
@@ -61,7 +61,7 @@
       "max": 2.0
     },
     {
-      "name": "GRCh38-ccREs_4IGV.bed",
+      "name": "ENCODE GRCh38 ccREs",
       "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/GRCh38-ccREs.bed",
       "format": "bed",
       "color": "rgb(0,153,0)"
@@ -73,8 +73,8 @@
       "color": "rgb(0,0,0)"
     },
     {
-      "name": "Genes",
-      "url": "https://storage.googleapis.com/broad-p16-calico/refGene_withExon1ofP14ModifiedByElena.txt.gz",
+      "name": "Gene track - modified",
+      "url": "https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz",
       "format": "refgene",
       "height": 100,
       "displayMode": "EXPANDED"
