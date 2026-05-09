@@ -24,7 +24,7 @@
     },
     {
       "name": "p16 CRISPRa",
-      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_p16.dialup.bedGraph",
+      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_p16.dialup_v2.bedGraph",
       "format": "bedgraph",
       "autoscale": false,
       "windowFunction": "mean",
@@ -33,7 +33,7 @@
     },
     {
       "name": "p14 CRISPRa",
-      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_p14.dialup.bedGraph",
+      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_p14.dialup_v2.bedGraph",
       "format": "bedgraph",
       "color": "rgb(0,153,0)",
       "autoscale": false,
@@ -43,7 +43,7 @@
     },
     {
       "name": "ANRIL CRISPRa",
-      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_CDKN2B-AS1.bedGraph",
+      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_CDKN2B-AS1_v2.bedGraph",
       "format": "bedgraph",
       "color": "rgb(153,51,255)",
       "autoscale": false,
@@ -53,7 +53,7 @@
     },
     {
       "name": "p15 CRISPRa",
-      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_CDKN2B.bedGraph",
+      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_CDKN2B_v2.bedGraph",
       "format": "bedgraph",
       "color": "rgb(255,51,51)",
       "autoscale": false,
@@ -64,6 +64,12 @@
     {
       "name": "Screen target regions",
       "url": "https://storage.googleapis.com/broad-p16-calico/target_regions.bed",
+      "format": "bed",
+      "color": "rgb(0,0,0)"
+    },
+    {
+      "name": "gRNA validation",
+      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/guides_validation_position.bed",
       "format": "bed",
       "color": "rgb(0,0,0)"
     },
