@@ -1,33 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Session genome="hg38" locus="chr9:22020596-22198609" nextAutoscaleGroup="4" version="8">
+<Session genome="hg38" locus="chr9:21962227-21969299" nextAutoscaleGroup="3" version="8">
     <Resources>
-        <Resource name="ENCFF906BPJ.bigWig" path="https://www.encodeproject.org/files/ENCFF906BPJ/@@download/ENCFF906BPJ.bigWig" type="bigwig"/>
+        <Resource path="https://hgdownload.soe.ucsc.edu/goldenPath/hg38/phastCons100way/hg38.phastCons100way.bw" type="bw"/>
+        <Resource path="https://www.encodeproject.org/files/ENCFF906BPJ/@@download/ENCFF906BPJ.bigWig" type="bw"/>
         <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/PDL50_target_regions.validated.tidy2_contributions.counts_scores.bw" type="bw"/>
         <Resource path="https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz" type="refgene"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy2.chromBPnetRegions.bed" type="bed"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy2.bed" type="bed"/>
         <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL54_hg38.CPM.bw" type="bw"/>
+        <Resource path="https://hgdownload.soe.ucsc.edu/gbdb/hg38/snp/dbSnp155Common.bb" type="bigbed"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy2.chromBPnetRegions.bed" type="bed"/>
         <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw" type="bw"/>
     </Resources>
-    <Panel name="DataPanel">
-        <Track attributeKey="CTCF_PDL54_hg38.CPM.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL54_hg38.CPM.bw" name="CTCF_PDL54_hg38.CPM.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
+    <Panel height="1760" name="DataPanel" width="843">
+        <Track attributeKey="CTCF_PDL54_hg38.CPM.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL54_hg38.CPM.bw" name="CTCF PDL54 CPM" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="2.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="H3K27ac_PDL54_hg38.CPM.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="102,102,102" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw" name="H3K27ac_PDL54_hg38.CPM.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="H3K27ac_PDL54_hg38.CPM.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="102,102,102" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw" name="H3K27ac PDL54 CPM" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="2.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="PDL50_target_regions.validated.tidy2_contributions.counts_scores.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" colorScale="ContinuousColorScale;0.0;-0.00888824462890625;0.0;0.0443115234375;247,247,6;255,255,255;0,0,178" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/PDL50_target_regions.validated.tidy2_contributions.counts_scores.bw" name="PDL50_target_regions.validated.tidy2_contributions.counts_scores.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
-            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="0.05" minimum="0.0" type="LINEAR"/>
+        <Track attributeKey="PDL50_target_regions.validated.tidy2_contributions.counts_scores.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/PDL50_target_regions.validated.tidy2_contributions.counts_scores.bw" name="chromBPnet attribution scores PDL50" renderer="BAR_CHART" visible="true" windowFunction="none">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="0.05" minimum="-0.01" type="LINEAR"/>
         </Track>
-        <Track attributeKey="target_regions.validated.tidy2.chromBPnetRegions.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy2.chromBPnetRegions.bed" name="target_regions.validated.tidy2.chromBPnetRegions.bed" visible="true"/>
-        <Track attributeKey="refGene_CDKN2AvB.txt.gz" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz" name="refGene_CDKN2AvB.txt.gz" visible="true"/>
-        <Track attributeKey="ENCFF906BPJ.bigWig" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,153,0" fontSize="10" id="https://www.encodeproject.org/files/ENCFF906BPJ/@@download/ENCFF906BPJ.bigWig" name="ENCFF906BPJ.bigWig" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="ENCFF906BPJ.bigWig" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,153,0" fontSize="10" id="https://www.encodeproject.org/files/ENCFF906BPJ/@@download/ENCFF906BPJ.bigWig" name="IMR-90 FOS ChIP ENCFF906BPJ" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10.0" minimum="0.0" type="LINEAR"/>
         </Track>
+        <Track attributeKey="dbSnp155Common.bb" clazz="org.broad.igv.track.FeatureTrack" color="0,0,0" featureVisibilityWindow="2150246" fontSize="10" groupByStrand="false" id="https://hgdownload.soe.ucsc.edu/gbdb/hg38/snp/dbSnp155Common.bb" name="dbSnp155Common - UCSC Browser" visible="true"/>
+        <Track attributeKey="hg38.phastCons100way.bw" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,102,0" colorScale="ContinuousColorScale;0.0;0.0;0.0;1.0;255,255,255;255,255,255;102,102,102" fontSize="10" id="https://hgdownload.soe.ucsc.edu/goldenPath/hg38/phastCons100way/hg38.phastCons100way.bw" name="phastCons100way - UCSC Browser" renderer="HEATMAP" visible="true" windowFunction="mean">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="0.999" minimum="0.0" type="LINEAR"/>
+        </Track>
+        <Track attributeKey="target_regions.validated.tidy2.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy2.bed" name="Validated regions" visible="true"/>
+        <Track attributeKey="target_regions.validated.tidy2.chromBPnetRegions.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy2.chromBPnetRegions.bed" name="chromBPnet regions" visible="true"/>
+        <Track attributeKey="refGene_CDKN2AvB.txt.gz" clazz="org.broad.igv.track.FeatureTrack" displayMode="EXPANDED" fontSize="10" groupByStrand="false" height="100" id="https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz" name="Gene track - modified" visible="true"/>
     </Panel>
-    <Panel name="FeaturePanel">
+    <Panel height="77" name="FeaturePanel" width="843">
         <Track attributeKey="Reference sequence" clazz="org.broad.igv.track.SequenceTrack" fontSize="10" id="Reference sequence" name="Reference sequence" sequenceTranslationStrandValue="+" shouldShowTranslation="false" visible="true"/>
+        <Track attributeKey="Refseq Genes" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://s3.amazonaws.com/igv.org.genomes/hg38/ncbiRefSeq.txt.gz" name="Refseq Genes" visible="true"/>
     </Panel>
-    <PanelLayout dividerFractions="0.9365351629502573"/>
+    <PanelLayout dividerFractions="0.8792341678939617"/>
     <HiddenAttributes>
         <Attribute name="DATA FILE"/>
         <Attribute name="DATA TYPE"/>

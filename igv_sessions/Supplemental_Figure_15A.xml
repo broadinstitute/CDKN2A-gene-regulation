@@ -1,69 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Session genome="hg38" locus="chr9:21719791-22202087" nextAutoscaleGroup="6" version="8">
+<Session genome="hg38" locus="chr9:21799999-22225000" nextAutoscaleGroup="3" version="8">
     <Resources>
         <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL33_hg38.CPM.bw" type="bw"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E3_chr9_res500.wig" type="wig"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E5_chr9_res500.wig" type="wig"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E8_chr9_res500.wig" type="wig"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy.bed" type="bed"/>
         <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL33_hg38.CPM.bw" type="bw"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E6_chr9_res500.wig" type="wig"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz" type="refgene"/>
         <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E2_chr9_res500.wig" type="wig"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E9_chr9_res500.wig" type="wig"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz" type="refgene"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E8_chr9_res500.wig" type="wig"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy2.bed" type="bed"/>
         <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E4_chr9_res500.wig" type="wig"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E7_chr9_res500.wig" type="wig"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E6_chr9_res500.wig" type="wig"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E5_chr9_res500.wig" type="wig"/>
         <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E1_chr9_res500.wig" type="wig"/>
         <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL54_hg38.CPM.bw" type="bw"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E9_chr9_res500.wig" type="wig"/>
         <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw" type="bw"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E3_chr9_res500.wig" type="wig"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E7_chr9_res500.wig" type="wig"/>
     </Resources>
-    <Panel name="DataPanel">
-        <Track attributeKey="CTCF_PDL33_hg38.CPM.bw" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL33_hg38.CPM.bw" name="CTCF_PDL33_hg38.CPM.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
-            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="4.8420787" minimum="0.0" type="LINEAR"/>
-        </Track>
-        <Track attributeKey="CTCF_PDL54_hg38.CPM.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL54_hg38.CPM.bw" name="CTCF_PDL54_hg38.CPM.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
+    <Panel height="2000" name="DataPanel" width="1408">
+        <Track attributeKey="CTCF_PDL33_hg38.CPM.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL33_hg38.CPM.bw" name="CTC PDL33 CPM" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="2.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="H3K27ac_PDL33_hg38.CPM.bw" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="102,102,102" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL33_hg38.CPM.bw" name="H3K27ac_PDL33_hg38.CPM.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
-            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="1.4238352" minimum="0.0" type="LINEAR"/>
-        </Track>
-        <Track attributeKey="H3K27ac_PDL54_hg38.CPM.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="102,102,102" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw" name="H3K27ac_PDL54_hg38.CPM.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="CTCF_PDL54_hg38.CPM.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL54_hg38.CPM.bw" name="CTCF PDL54 CPM" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="2.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="Virtual_4C_E1" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E1_chr9_res500.wig" name="Virtual_4C_E1" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="H3K27ac_PDL33_hg38.CPM.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="102,102,102" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL33_hg38.CPM.bw" name="H3K27ac PDL33 CPM" renderer="BAR_CHART" visible="true" windowFunction="mean">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="2.0" minimum="0.0" type="LINEAR"/>
+        </Track>
+        <Track attributeKey="H3K27ac_PDL54_hg38.CPM.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="102,102,102" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw" name="H3K27ac PDL54 CPM" renderer="BAR_CHART" visible="true" windowFunction="mean">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="2.0" minimum="0.0" type="LINEAR"/>
+        </Track>
+        <Track attributeKey="virtual_4C_E1_chr9_res500.wig" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E1_chr9_res500.wig" name="Virtual 4C - E1" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="Virtual_4C_E2" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E2_chr9_res500.wig" name="Virtual_4C_E2" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="virtual_4C_E2_chr9_res500.wig" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E2_chr9_res500.wig" name="Virtual 4C - E2" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="Virtual_4C_E3" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E3_chr9_res500.wig" name="Virtual_4C_E3" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="virtual_4C_E3_chr9_res500.wig" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E3_chr9_res500.wig" name="Virtual 4C - E3" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="Virtual_4C_E5" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E5_chr9_res500.wig" name="Virtual_4C_E5" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="virtual_4C_E4_chr9_res500.wig" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E4_chr9_res500.wig" name="Virtual 4C - E4" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="Virtual_4C_E4" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E4_chr9_res500.wig" name="Virtual_4C_E4" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="virtual_4C_E5_chr9_res500.wig" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E5_chr9_res500.wig" name="Virtual 4C - E5" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="Virtual_4C_E6" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E6_chr9_res500.wig" name="Virtual_4C_E6" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="virtual_4C_E6_chr9_res500.wig" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E6_chr9_res500.wig" name="Virtual 4C - E6" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="Virtual_4C_E7" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E7_chr9_res500.wig" name="Virtual_4C_E7" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="virtual_4C_E7_chr9_res500.wig" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E7_chr9_res500.wig" name="Virtual 4C - E7" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="Virtual_4C_E8" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E8_chr9_res500.wig" name="Virtual_4C_E8" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="virtual_4C_E8_chr9_res500.wig" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E8_chr9_res500.wig" name="Virtual 4C - E8" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="Virtual_4C_E9" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E9_chr9_res500.wig" name="Virtual_4C_E9" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="virtual_4C_E9_chr9_res500.wig" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/virtual_4C_E9_chr9_res500.wig" name="Virtual 4C - E9" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="target_regions.validated.tidy.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy.bed" name="target_regions.validated.tidy.bed" visible="true"/>
-        <Track attributeKey="refGene_CDKN2AvB.txt.gz" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz" name="refGene_CDKN2AvB.txt.gz" visible="true"/>
+        <Track attributeKey="target_regions.validated.tidy2.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy2.bed" name="Validated regions" visible="true"/>
+        <Track attributeKey="refGene_CDKN2AvB.txt.gz" clazz="org.broad.igv.track.FeatureTrack" displayMode="EXPANDED" fontSize="10" groupByStrand="false" height="100" id="https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz" name="Gene track - modified" visible="true"/>
     </Panel>
-    <Panel name="FeaturePanel">
+    <Panel height="77" name="FeaturePanel" width="1408">
         <Track attributeKey="Reference sequence" clazz="org.broad.igv.track.SequenceTrack" fontSize="10" id="Reference sequence" name="Reference sequence" sequenceTranslationStrandValue="+" shouldShowTranslation="false" visible="true"/>
+        <Track attributeKey="Refseq Genes" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://s3.amazonaws.com/igv.org.genomes/hg38/ncbiRefSeq.txt.gz" name="Refseq Genes" visible="true"/>
     </Panel>
-    <PanelLayout dividerFractions="0.9365351629502573"/>
+    <PanelLayout dividerFractions="0.8794117647058823"/>
     <HiddenAttributes>
         <Attribute name="DATA FILE"/>
         <Attribute name="DATA TYPE"/>

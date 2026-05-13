@@ -1,49 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Session genome="hg38" locus="chr9:21849998-22450000" nextAutoscaleGroup="2" version="8">
+<Session genome="hg38" locus="chr9:22074747-22197058" nextAutoscaleGroup="3" version="8">
     <Resources>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_p14.dialup.bedGraph" type="bedgraph"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_CDKN2B-AS1.bedGraph" type="bedgraph"/>
-        <Resource name="ENCFF860GGZ.bigWig" path="https://www.encodeproject.org/files/ENCFF860GGZ/@@download/ENCFF860GGZ.bigWig" type="bigwig"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy.bed" type="bed"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/refGene_withExon1ofP14ModifiedByElena.txt.gz" type="refgene"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_CDKN2B.bedGraph" type="bedgraph"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/target_regions.bed" type="bed"/>
-        <Resource name="ENCFF850RSK.bigWig" path="https://www.encodeproject.org/files/ENCFF850RSK/@@download/ENCFF850RSK.bigWig" type="bigwig"/>
         <Resource path="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw" type="bw"/>
+        <Resource path="https://www.encodeproject.org/files/ENCFF850RSK/@@download/ENCFF850RSK.bigWig" type="bw"/>
+        <Resource path="https://www.encodeproject.org/files/ENCFF860GGZ/@@download/ENCFF860GGZ.bigWig" type="bw"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/Harismendy_Farooq_All_Enhancers_LiftOver_hg38_withManualAnnotation.bed" type="bed"/>
         <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/Farooq_KO_Regions_Enhancers.bed" type="bed"/>
-        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_p16.dialup.bedGraph" type="bedgraph"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/target_regions.bed" type="bed"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy2.bed" type="bed"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_p16.dialup_v2.bedGraph" type="bedgraph"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_p14.dialup_v2.bedGraph" type="bedgraph"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_CDKN2B-AS1_v2.bedGraph" type="bedgraph"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_CDKN2B_v2.bedGraph" type="bedgraph"/>
+        <Resource path="https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz" type="refgene"/>
     </Resources>
     <Panel name="DataPanel">
-        <Track attributeKey="H3K27ac_PDL54_hg38.CPM.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="102,102,102" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw" name="WI-38 H3K27ac_PDL54.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="H3K27ac_PDL54_hg38.CPM.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="102,102,102" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL54_hg38.CPM.bw" name="Wi-38 H3K27ac PDL54 CPM" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="2.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="ENCFF850RSK.bigWig" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="200,0,0" fontSize="10" id="https://www.encodeproject.org/files/ENCFF850RSK/@@download/ENCFF850RSK.bigWig" name="Hela H3K27ac (ENCODE)" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="ENCFF850RSK.bigWig" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="200,0,0" fontSize="10" id="https://www.encodeproject.org/files/ENCFF850RSK/@@download/ENCFF850RSK.bigWig" name="Hela H3K27ac ENCFF850RSK" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="50.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="ENCFF860GGZ.bigWig" autoScale="true" clazz="org.broad.igv.track.DataSourceTrack" color="0,150,0" fontSize="10" id="https://www.encodeproject.org/files/ENCFF860GGZ/@@download/ENCFF860GGZ.bigWig" name="Hela H3K4me1 (ENCODE)" renderer="BAR_CHART" visible="true" windowFunction="mean">
-            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="13.977658" minimum="0.0" type="LINEAR"/>
+        <Track attributeKey="ENCFF860GGZ.bigWig" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,150,0" fontSize="10" id="https://www.encodeproject.org/files/ENCFF860GGZ/@@download/ENCFF860GGZ.bigWig" name="Hela H3K4me1 ENCFF860GGZ" renderer="BAR_CHART" visible="true" windowFunction="mean">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="14.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="Farooq_KO_Regions_Enhancers (1).bed" clazz="org.broad.igv.track.FeatureTrack" displayMode="EXPANDED" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/Farooq_KO_Regions_Enhancers.bed" name="Farooq_KORegions" visible="true"/>
+        <Track attributeKey="Harismendy_Farooq_All_Enhancers_LiftOver_hg38_withManualAnnotation.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/Harismendy_Farooq_All_Enhancers_LiftOver_hg38_withManualAnnotation.bed" name="Putative CREs Farooq et al" visible="true"/>
+        <Track attributeKey="Farooq_KO_Regions_Enhancers.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/Farooq_KO_Regions_Enhancers.bed" name="KO Regions Farooq et al" visible="true"/>
         <Track attributeKey="target_regions.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/target_regions.bed" name="Screen target regions" visible="true"/>
-        <Track attributeKey="target_regions.validated.tidy.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy.bed" name="target_regions.validated.tidy.bed" visible="true"/>
-        <Track attributeKey="sceptre_guides_new_version_mixture_corrected_p16.dialup.bedGraph" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,178" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_p16.dialup.bedGraph" name="sceptre_guides_new_version_mixture_corrected_p16.dialup.bedGraph" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="target_regions.validated.tidy2.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/target_regions.validated.tidy2.bed" name="Validated regions" visible="true"/>
+        <Track attributeKey="sceptre_guides_new_version_mixture_corrected_p16.dialup_v2.bedGraph" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_p16.dialup_v2.bedGraph" name="p16 CRISPRa" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="sceptre_guides_new_version_mixture_corrected_p14.dialup.bedGraph" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,153,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_p14.dialup.bedGraph" name="sceptre_guides_new_version_mixture_corrected_p14.dialup.bedGraph" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="sceptre_guides_new_version_mixture_corrected_p14.dialup_v2.bedGraph" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,153,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_p14.dialup_v2.bedGraph" name="p14 CRISPRa" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="sceptre_guides_new_version_mixture_corrected_CDKN2B-AS1.bedGraph" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="153,0,204" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_CDKN2B-AS1.bedGraph" name="sceptre_guides_new_version_mixture_corrected_CDKN2B-AS1.bedGraph" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="sceptre_guides_new_version_mixture_corrected_CDKN2B-AS1_v2.bedGraph" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="153,51,255" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_CDKN2B-AS1_v2.bedGraph" name="ANRIL CRISPRa" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="sceptre_guides_new_version_mixture_corrected_CDKN2B.bedGraph" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="255,0,0" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_CDKN2B.bedGraph" name="sceptre_guides_new_version_mixture_corrected_CDKN2B.bedGraph" renderer="BAR_CHART" visible="true" windowFunction="mean">
+        <Track attributeKey="sceptre_guides_new_version_mixture_corrected_CDKN2B_v2.bedGraph" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="255,51,51" fontSize="10" id="https://storage.googleapis.com/broad-p16-calico/igv_tracks/sceptre_guides_new_version_mixture_corrected_CDKN2B_v2.bedGraph" name="p15 CRISPRa" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="10.0" minimum="0.0" type="LINEAR"/>
         </Track>
-        <Track attributeKey="refGene_withExon1ofP14ModifiedByElena.txt.gz" clazz="org.broad.igv.track.FeatureTrack" displayMode="EXPANDED" fontSize="10" groupByStrand="false" id="https://storage.googleapis.com/broad-p16-calico/refGene_withExon1ofP14ModifiedByElena.txt.gz" name="refGene_withExon1ofP14ModifiedByElena.txt.gz" visible="true"/>
+        <Track attributeKey="refGene_CDKN2AvB.txt.gz" clazz="org.broad.igv.track.FeatureTrack" displayMode="EXPANDED" fontSize="10" groupByStrand="false" height="100" id="https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz" name="Gene track - modified" visible="true"/>
     </Panel>
     <Panel name="FeaturePanel">
         <Track attributeKey="Reference sequence" clazz="org.broad.igv.track.SequenceTrack" fontSize="10" id="Reference sequence" name="Reference sequence" sequenceTranslationStrandValue="+" shouldShowTranslation="false" visible="true"/>
     </Panel>
-    <PanelLayout dividerFractions="0.8816466552315609"/>
+    <PanelLayout dividerFractions="0.8799313893653516"/>
     <HiddenAttributes>
         <Attribute name="DATA FILE"/>
         <Attribute name="DATA TYPE"/>
