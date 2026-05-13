@@ -22,7 +22,7 @@ To distinguish p14ARF and p16INK4A in single-cell expression data, we generated 
 
 | Figure | Description | Scripts |
 |---|---|---|
-| Fig 1 | GTEx/FANTOM tissue expression | [`GTEx_heatmaps_rev_order_addingMTAP.R`](#gtex-tissue-expression-fig-1) |
+| Fig 1 | GTEx/FANTOM tissue expression | [`GTEx_heatmaps_rev_order_addingMTAP.R`](#gtex-tissue-expression-fig-1), code in [`FantomUpsetR/`],[`GTExUpsetR/`],[`VioPlots/`]  |
 | Fig 2 | Cell type expression from 5’ scRNA-seq | Notebooks in [`scRNA_5prime/`](#deconvolution-of-cdkn2a-in-5-scrna-seq-fig-2) |
 | Fig 3 | p16/p14 enrichment from 3’ libraries | [`Figure_3C_expanded.py`](#enrichment-of-p16-and-p14-from-3-single-cell-libraries-fig-3), `Brugge_comparison.ipynb`, `Brugge_umaps_dotplot.ipynb` |
 | Fig 4 | WI-38 replicative senescence switch | Notebooks in [`scRNA_dialup/`](#p14-to-p16-switch-during-replicative-senescence-fig-4) |
@@ -146,13 +146,12 @@ The scRNA_5prime/ and scRNA_dialup/ notebooks read from public GEO/SRA accession
 
 ### Analyses not in this repo
 
-The following analyses are described in Methods but use standard pipelines or were performed by collaborators; no custom code is included here. Refer to the Methods section for parameters.
+The following analyses are described in Methods. Refer to the Methods section for parameters.
 
 - ATAC-seq processing (bowtie2 + macs2 + deepTools CPM normalization)
 - ChIP-seq processing (ENCODE uniform pipeline; HOMER peak calling)
 - ChromBPNet 0.1.7 attribution scores + DeepLIFT + TOMTOM motif annotation
 - qRT-PCR Z-score / fold-change combination across replicates
-- GTEx violin plots (Fig 1F, Suppl Fig 3) and GTEx + FANTOM upset plots (Fig 1D-E)
 - sci-ATAC-seq cCRE × cell type heatmap (Fig 7E)
 
 ## Software
