@@ -20,7 +20,7 @@
       "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/CTCF_PDL33_hg38.CPM.bw",
       "format": "bigwig",
       "color": "rgb(0,0,0)",
-      "autoscale": true,
+      "autoscale": false,
       "windowFunction": "mean",
       "min": 0.0,
       "max": 2.0
@@ -40,7 +40,7 @@
       "url": "https://storage.googleapis.com/broad-p16-calico/ChIP-seq-PBS/AfterReprocessing_Merging_Libraries_FromSame_ChIP/CPM_Norm/H3K27ac_PDL33_hg38.CPM.bw",
       "format": "bigwig",
       "color": "rgb(102,102,102)",
-      "autoscale": true,
+      "autoscale": false,
       "windowFunction": "mean",
       "min": 0.0,
       "max": 2.0
