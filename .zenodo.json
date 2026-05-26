@@ -1,0 +1,27 @@
+{
+  "title": "Code for: Chromatin topology and distal elements underlie divergent cell type-specific regulation of 9p21 locus cell cycle genes",
+  "description": "Analysis code accompanying Torlai Triglia, Miller et al. Includes single-cell RNA-seq quantification of p16INK4A/p14ARF, GTEx/FANTOM tissue expression, Region Capture Micro-C and loop calling, ATAC-seq differential accessibility, CRISPRa screen (SCEPTRE) analysis, ChromBPNet attribution, and IGV session files for the 9p21 locus. Raw and processed data are available at GEO GSE309515.",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {"name": "Torlai Triglia, Elena", "affiliation": "Broad Institute of MIT and Harvard"},
+    {"name": "Durand, Neva C.", "affiliation": "Broad Institute of MIT and Harvard"},
+    {"name": "Casaní-Galdón, Salvador", "affiliation": "Broad Institute of MIT and Harvard"},
+    {"name": "Raman, Ayush", "affiliation": "Broad Institute of MIT and Harvard"}
+  ],
+  "keywords": [
+    "9p21",
+    "CDKN2A",
+    "p16INK4A",
+    "p14ARF",
+    "CDKN2B",
+    "gene regulation",
+    "single-cell RNA-seq",
+    "CRISPRa",
+    "Region Capture Micro-C",
+    "replicative senescence"
+  ],
+  "related_identifiers": [
+    {"identifier": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE309515", "relation": "isSupplementedBy", "scheme": "url"}
+  ]
+}

@@ -1,0 +1,93 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the article below."
+title: "Code for: Chromatin topology and distal elements underlie divergent cell type-specific regulation of 9p21 locus cell cycle genes"
+type: software
+authors:
+  - given-names: Elena
+    family-names: Torlai Triglia
+    affiliation: "Broad Institute of MIT and Harvard"
+  - given-names: Neva C.
+    family-names: Durand
+    affiliation: "Broad Institute of MIT and Harvard"
+  - given-names: Salvador
+    family-names: Casaní-Galdón
+    affiliation: "Broad Institute of MIT and Harvard"
+  - given-names: Ayush
+    family-names: Raman
+    affiliation: "Broad Institute of MIT and Harvard"
+repository-code: "https://github.com/broadinstitute/CDKN2A-gene-regulation"
+license: MIT
+version: 1.0.0
+date-released: 2026-05-26
+keywords:
+  - 9p21
+  - CDKN2A
+  - p16INK4A
+  - p14ARF
+  - CDKN2B
+  - gene regulation
+  - single-cell RNA-seq
+  - CRISPRa
+  - Region Capture Micro-C
+  - replicative senescence
+preferred-citation:
+  type: article
+  title: "Chromatin topology and distal elements underlie divergent cell type-specific regulation of 9p21 locus cell cycle genes"
+  year: 2026
+  journal: "Cell Genomics"
+  notes: "Manuscript in revision; update with the published DOI on acceptance."
+  authors:
+    - given-names: Elena
+      family-names: Torlai Triglia
+    - given-names: Tyler E.
+      family-names: Miller
+    - given-names: Neva C.
+      family-names: Durand
+    - given-names: Kyung Lock
+      family-names: Kim
+    - given-names: Salvador
+      family-names: Casaní-Galdón
+    - given-names: Joshua
+      family-names: D'Antonio
+    - given-names: Nauman
+      family-names: Javed
+    - given-names: Alessandro
+      family-names: Paz Hernandez
+    - given-names: Ayush
+      family-names: Raman
+    - given-names: Anna J.
+      family-names: Cruz
+    - given-names: Robbyn
+      family-names: Issner
+    - given-names: Abhishek
+      family-names: Choudhary
+    - given-names: Francois
+      family-names: Aguet
+    - given-names: Julia
+      family-names: Verga
+    - given-names: Michelle
+      family-names: Chan
+    - given-names: Carman Man-Chung
+      family-names: Li
+    - given-names: Vivian
+      family-names: Hecht
+    - given-names: Martin
+      family-names: Aryee
+    - given-names: Charles B.
+      family-names: Epstein
+    - given-names: David R.
+      family-names: Kelley
+    - given-names: Fadi J.
+      family-names: Najm
+    - given-names: Noam
+      family-names: Shoresh
+    - given-names: Kristin
+      family-names: Ardlie
+    - given-names: David G.
+      family-names: Hendrickson
+    - given-names: J. Graham
+      family-names: Ruby
+    - given-names: Bradley E.
+      family-names: Bernstein
+    - given-names: Elizabeth
+      family-names: Gaskell
