@@ -16,9 +16,14 @@ authors:
     family-names: Raman
     affiliation: "Broad Institute of MIT and Harvard"
 repository-code: "https://github.com/broadinstitute/CDKN2A-gene-regulation"
+doi: 10.5281/zenodo.20411706
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.20411706
+    description: Zenodo archive of the software
 license: MIT
 version: 1.0.0
-date-released: 2026-05-26
+date-released: 2026-05-27
 keywords:
   - 9p21
   - CDKN2A
