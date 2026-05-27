@@ -9,7 +9,7 @@ Where no RRID was found, the canonical project URL is given and RRID is "N/A".
 
 | REAGENT or RESOURCE | SOURCE | IDENTIFIER |
 |---|---|---|
-| **Original code (this study)** | This paper | https://github.com/broadinstitute/CDKN2A-gene-regulation ; Zenodo: https://doi.org/10.5281/zenodo.20411706 |
+| **Original code (this study)** | This paper | https://github.com/broadinstitute/CDKN2A-gene-regulation ; Zenodo: https://doi.org/10.5281/zenodo.20411705 |
 | R (v4.4.2; v4.3.1 for RCMC visualization) | R Core Team | RRID:SCR_001905 ; https://www.r-project.org/ |
 | Python (v3) | Python Software Foundation | RRID:SCR_008394 ; https://www.python.org/ |
 | STAR / STARsolo (v2.7.10a_alpha_220818; v2.7.10b_alpha_230301) | Dobin et al., 2013 | RRID:SCR_004463 ; https://github.com/alexdobin/STAR |
