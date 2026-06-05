@@ -13,7 +13,7 @@ Sources for the source tracks (full details in Methods, available in /data):
 
 - Fine-mapped UKBB variants: [Finucane lab catalog](https://www.finucanelab.org/data).
 - Cancer germline GWAS lead SNPs: [EBI GWAS catalog](https://www.ebi.ac.uk/gwas).
-- Fine-mapped eQTLs: GTEx V10, per-tissue, manually overlapped per transcript.
+- Fine-mapped eQTLs: GTEx V10, per-tissue, overlapped per transcript.
 
 - LD: UKBB 337K British-ancestry individuals. -- available on https://storage.googleapis.com/broad-p16-calico/public/UKBB_LD.p16_expanded_locus.parquet
 
