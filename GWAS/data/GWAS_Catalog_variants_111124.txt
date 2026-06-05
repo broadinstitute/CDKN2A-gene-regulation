@@ -1,0 +1,94 @@
+DISEASE/TRAIT	chr	position	STRONGEST SNP-RISK ALLELE	rs_id	pval	PVALUE_MLOG	OR or BETA	95% CI (TEXT)	MAPPED_TRAIT	STUDY ACCESSION	trait_id	trait_category	pip	cs_id
+Glioblastoma	chr9	22066213	rs145929329-ATT	rs145929329	5e-12	11.301029995663981	1.35	[1.24-1.47]	glioblastoma multiforme	GCST003220	Glioma	Glioma	0.565051499783199	1
+Non-glioblastoma glioma	chr9	22033367	rs2157719-C	rs2157719	2e-11	10.698970004336019	1.27	[1.19-1.36]	central nervous system cancer	GCST003227	Glioma	Glioma	0.534948500216801	1
+Glioma	chr9	22033367	rs2157719-C	rs2157719	3e-17	16.522878745280337	1.28	[1.21-1.35]	central nervous system cancer	GCST003228	Glioma	Glioma	0.8261439372640169	1
+Chronic lymphocytic leukemia	chr9	22206988	rs1679013-C	rs1679013	1e-08	8.0	1.19	[1.12-1.27]	chronic lymphocytic leukemia	GCST002073	Leukemia	Leukemia	0.4	1
+Basal cell carcinoma	chr9	22034720	rs2151280-G	rs2151280	3e-10	9.522878745280337	1.2	[1.14-1.27]	basal cell carcinoma	GCST002331	Keratinocyte Carcinoma	Keratinocyte Carcinoma	0.4761439372640169	1
+Basal cell carcinoma	chr9	22034720	rs2151280-G	rs2151280	9e-11	10.045757490560675	1.19	[NR]	basal cell carcinoma	GCST002842	Keratinocyte Carcinoma	Keratinocyte Carcinoma	0.5022878745280337	1
+Acute lymphoblastic leukemia (B-cell precursor)	chr9	21984662	rs3731217-?	rs3731217	2e-08	7.698970004336019			B-cell acute lymphoblastic leukemia	GCST002158	Leukemia	Leukemia	0.38494850021680094	1
+Glioma	chr9	22068653	rs4977756-G	rs4977756	1e-08	8.0	1.283	[1.177-1.398]	glioma	GCST001633	Glioma	Glioma	0.4	1
+Glioma (high-grade)	chr9	22043927	rs1412829-C	rs1412829	2e-10	9.698970004336019	1.42	[1.27-1.58]	central nervous system cancer	GCST000440	Glioma	Glioma	0.4849485002168009	1
+Breast cancer	chr9	22062135	rs1011970-T	rs1011970	3e-08	7.522878745280337	1.09	[1.04-1.14]	breast carcinoma	GCST000678	Breast Cancer	Breast Cancer	0.37614393726401685	1
+Glioma	chr9	22068653	rs4977756-G	rs4977756	7e-15	14.154901959985743	1.24	[1.19-1.30]	central nervous system cancer	GCST000439	Glioma	Glioma	0.7077450979992872	1
+Melanoma	chr9	21816529	rs7023329-?	rs7023329	7e-09	8.154901959985743	1.2	[1.14-1.28]	melanoma	GCST001267	Melanoma	Melanoma	0.40774509799928715	1
+Glioma	chr9	22033367	rs2157719-?	rs2157719	5e-16	15.301029995663981	1.26	[NR]	central nervous system cancer	GCST001058	Glioma	Glioma	0.7650514997831991	1
+Prostate cancer	chr9	22041999	rs17694493-G	rs17694493	4e-08	7.3979400086720375	1.1	[1.06-1.13]	prostate carcinoma	GCST002606	Prostate Cancer	Prostate Cancer	0.36989700043360185	1
+Basal cell carcinoma	chr9	22054691	rs7874604-T	rs7874604	5e-13	12.301029995663981	1.1	[NR]	basal cell carcinoma	GCST003726	Keratinocyte Carcinoma	Keratinocyte Carcinoma	0.6150514997831991	1
+Breast cancer	chr9	22062135	rs1011970-T	rs1011970	4e-09	8.397940008672037	1.06	[1.03-1.08]	breast carcinoma	GCST004950	Breast Cancer	Breast Cancer	0.4198970004336019	1
+Colorectal cancer or advanced adenoma	chr9	22103184	rs1537372-G	rs1537372	1e-08	8.0	1.05	[1.03-1.07]	colorectal cancer, colorectal adenoma	GCST007856	Pan-cancer	Pan-cancer	0.4	1
+Nevus count or cutaneous melanoma	chr9	21844773	rs11532907-?	rs11532907	2e-34	33.69897000433602			nevus count, cutaneous melanoma	GCST007505	Melanoma	Melanoma	1.0	1
+Nevus count or cutaneous melanoma	chr9	21804694	rs869329-?	rs869329	7e-67	66.15490195998575			nevus count, cutaneous melanoma	GCST007505	Melanoma	Melanoma	1.0	1
+Prostate cancer	chr9	22041999	rs17694493-G	rs17694493	1e-12	12.0	1.074	[1.05-1.09]	prostate carcinoma	GCST011049	Prostate Cancer	Prostate Cancer	0.6	1
+Melanoma	chr9	21803881	rs871024-C	rs871024	6e-29	28.221848749616356	1.2163	NR	melanoma	GCST90011809	Melanoma	Melanoma	1.0	1
+Melanoma	chr9	21995045	rs55797833-T	rs55797833	7e-12	11.154901959985743	1.7143	NR	melanoma	GCST90011809	Melanoma	Melanoma	0.5577450979992872	1
+Acute lymphoblastic leukemia in childhood (B cell precursor)	chr9	21970917	rs3731249-?	rs3731249	1e-27	27.0	2.65	[2.22-3.17]	B-cell acute lymphoblastic leukemia	GCST005832	Leukemia	Leukemia	1.0	1
+Acute lymphoblastic leukemia in childhood (B cell precursor)	chr9	21984662	rs3731217-?	rs3731217	7e-14	13.154901959985743	1.4285715	[0.64-0.77]	B-cell acute lymphoblastic leukemia	GCST005832	Leukemia	Leukemia	0.6577450979992872	1
+Endometrial cancer	chr9	22207038	rs1679014-T	rs1679014	6e-09	8.221848749616356	1.18	[1.12-1.25]	endometrial carcinoma	GCST006464	Endometrial Cancer	Endometrial Cancer	0.4110924374808178	1
+Glioblastoma (age-stratified)	chr9	22032153	rs634537-G	rs634537	3e-15	14.522878745280337	1.38	[1.27-1.49]	age at onset, glioblastoma multiforme	GCST006480	Glioma	Glioma	0.7261439372640168	1
+Glioblastoma (age-stratified)	chr9	22032153	rs634537-G	rs634537	1e-16	16.0	1.4	[1.29-1.51]	age at onset, glioblastoma multiforme	GCST006480	Glioma	Glioma	0.8	1
+Glioblastoma (age-stratified)	chr9	22032153	rs634537-G	rs634537	4e-19	18.397940008672037	1.44	[1.33-1.56]	age at onset, glioblastoma multiforme	GCST006480	Glioma	Glioma	0.9198970004336019	1
+Glioma	chr9	22032153	rs634537-G	rs634537	2e-21	20.69897000433602	1.33	[1.25-1.41]	glioma	GCST005931	Glioma	Glioma	1.0	1
+Glioma	chr9	22032153	rs634537-G	rs634537	7e-14	13.154901959985743	1.3	[1.21-1.39]	glioma	GCST005931	Glioma	Glioma	0.6577450979992872	1
+Glioblastoma	chr9	22032153	rs634537-G	rs634537	1e-20	20.0	1.38	[1.29-1.48]	glioma	GCST005932	Glioma	Glioma	1.0	1
+Glioblastoma	chr9	22032153	rs634537-G	rs634537	2e-16	15.698970004336019	1.41	[1.30-1.53]	glioma	GCST005932	Glioma	Glioma	0.784948500216801	1
+Non-glioblastoma glioma	chr9	22032153	rs634537-G	rs634537	3e-08	7.522878745280337	1.26	[1.16-1.37]	glioma	GCST005933	Glioma	Glioma	0.37614393726401685	1
+Non-melanoma skin cancer	chr9	22049131	rs10738605-G	rs10738605	6e-10	9.221848749616356	1.13	[1.08-1.17]	non-melanoma skin carcinoma	GCST005896	Non-Melanoma Skin Cancer	Non-Melanoma Skin Cancer	0.4610924374808178	1
+Prostate cancer	chr9	22041999	rs17694493-G	rs17694493	2e-10	9.698970004336019	1.08	[1.05-1.10]	prostate carcinoma	GCST006085	Prostate Cancer	Prostate Cancer	0.4849485002168009	1
+Type 2 diabetes or prostate cancer (pleiotropy)	chr9	22003224	rs3217992-?	rs3217992	8e-09	8.096910013008056			prostate carcinoma, type 2 diabetes mellitus	GCST011320	Prostate Cancer	Prostate Cancer	0.4048455006504028	1
+Basal cell carcinoma	chr9	22048392	rs7027950-T	rs7027950	2e-28	27.69897000433602	0.120776474	[0.099-0.142] unit decrease	basal cell carcinoma	GCST90013410	Keratinocyte Carcinoma	Keratinocyte Carcinoma	1.0	1
+Multiple myeloma	chr9	21983915	rs3731222-T	rs3731222	3e-16	15.522878745280337	1.23	[1.2-1.3]	multiple myeloma	GCST90451657	Myeloma	Myeloma	0.7761439372640169	1
+Colorectal cancer	chr9	22092925	rs10811654-G	rs10811654	2e-09	8.698970004336019	0.0736	[0.05-0.098] unit decrease	colorectal cancer	GCST90018808	Colorectal Cancer	Colorectal Cancer	0.4349485002168009	1
+Melanoma x citrus consumption interaction (2df)	chr9	21804694	rs869329-A	rs869329	2e-10	9.698970004336019			citrus intake measurement, melanoma	GCST90094985	Melanoma	Melanoma	0.4849485002168009	1
+Non-small cell lung cancer	chr9	21787522	rs10429489-A	rs10429489	7e-10	9.154901959985743	1.11	[1.08-1.15]	non-small cell lung carcinoma	GCST008834	Lung Cancer	Lung Cancer	0.45774509799928714	1
+Multiple myeloma	chr9	21991924	rs2811710-G	rs2811710	2e-13	12.698970004336019	1.15	[NR]	multiple myeloma	GCST004483	Myeloma	Myeloma	0.6349485002168009	1
+Acute lymphoblastic leukemia (childhood)	chr9	22006274	rs2069426-A	rs2069426	4e-09	8.397940008672037	1.35	[NR]	acute lymphoblastic leukemia	GCST005315	Leukemia	Leukemia	0.4198970004336019	1
+Breast cancer, ovarian cancer or prostate cancer (pleiotropy)	chr9	21956231	rs9657608-T	rs9657608	1e-10	10.0	0.0685	[0.048-0.089] unit increase	prostate carcinoma, breast carcinoma, ovarian carcinoma	GCST010797	Pan-cancer	Pan-cancer	0.5	1
+Basal cell carcinoma	chr9	22054691	rs7874604-T	rs7874604	4e-36	35.39794000867204	1.11	[1.10-1.13]	basal cell carcinoma	GCST008871	Keratinocyte Carcinoma	Keratinocyte Carcinoma	1.0	1
+Keratinocyte cancer (MTAG)	chr9	22054691	rs7874604-T	rs7874604	6e-27	26.221848749616356	1.1	[1.08-1.12]	keratinocyte carcinoma	GCST008870	Keratinocyte Carcinoma	Keratinocyte Carcinoma	1.0	1
+Cutaneous malignant melanoma	chr9	22067911	rs75883022-T	rs75883022	7e-13	12.154901959985743	1.2615113	NR	cutaneous melanoma	GCST010304	Melanoma	Melanoma	0.6077450979992871	1
+Cutaneous malignant melanoma	chr9	22005331	rs3217986-G	rs3217986	4e-22	21.397940008672037	1.1720581	NR	cutaneous melanoma	GCST010304	Melanoma	Melanoma	1.0	1
+Cutaneous malignant melanoma	chr9	21956493	rs2027939-G	rs2027939	3e-09	8.522878745280337	1.09	NR	cutaneous melanoma	GCST010304	Melanoma	Melanoma	0.4261439372640169	1
+Cutaneous malignant melanoma	chr9	21803881	rs871024-C	rs871024	3e-65	64.52287874528034	1.1782	NR	cutaneous melanoma	GCST010304	Melanoma	Melanoma	1.0	1
+Cutaneous malignant melanoma	chr9	21995045	rs55797833-T	rs55797833	3e-19	18.522878745280337	1.5024	NR	cutaneous melanoma	GCST010304	Melanoma	Melanoma	0.9261439372640169	1
+Cutaneous malignant melanoma	chr9	22011361	rs79356439-A	rs79356439	9e-13	12.045757490560675	1.8504	NR	cutaneous melanoma	GCST010304	Melanoma	Melanoma	0.6022878745280338	1
+Nevus count or cutaneous melanoma	chr9	21804618	rs869330-A	rs869330	6e-113	112.22184874961636			nevus count, cutaneous melanoma	GCST010303	Melanoma	Melanoma	1.0	1
+Cutaneous melanoma or hair colour	chr9	22067594	rs10811650-A	rs10811650	2e-18	17.69897000433602			cutaneous melanoma, hair color	GCST010302	Melanoma	Melanoma	0.8849485002168009	1
+B-cell acute lymphoblastic leukaemia	chr9	21976403	rs113650570-A	rs113650570	8e-35	34.096910013008056	2.32	[2.03-2.65]	B-cell acute lymphoblastic leukemia	GCST009638	Leukemia	Leukemia	1.0	1
+Lung adenocarcinoma	chr9	21787522	rs10429489-A	rs10429489	4e-13	12.397940008672037	1.16	[1.11-1.20]	lung adenocarcinoma	GCST012201	Lung Cancer	Lung Cancer	0.6198970004336019	1
+Non-small cell lung cancer	chr9	21787522	rs10429489-A	rs10429489	7e-10	9.154901959985743	1.11	[1.08-1.15]	non-small cell lung carcinoma	GCST012199	Lung Cancer	Lung Cancer	0.45774509799928714	1
+Breast cancer	chr9	22006349	rs974336-T	rs974336	6e-09	8.221848749616356	1.1	[1.06-1.13]	breast carcinoma	GCST90091211	Breast Cancer	Breast Cancer	0.4110924374808178	1
+Melanoma	chr9	21816529	rs7023329-?	rs7023329	7e-09	8.154901959985743	1.1627907	[NR]	melanoma	GCST004142	Melanoma	Melanoma	0.40774509799928715	1
+Melanoma	chr9	21805208	rs201131773-?	rs201131773	3e-17	16.522878745280337	1.19	[1.15-1.24]	melanoma	GCST004142	Melanoma	Melanoma	0.8261439372640169	1
+Chronic lymphocytic leukemia	chr9	22206988	rs1679013-C	rs1679013	2e-08	7.698970004336019	1.16	[1.1-1.22]	chronic lymphocytic leukemia	GCST004146	Leukemia	Leukemia	0.38494850021680094	1
+Chronic lymphocytic leukemia	chr9	22336997	rs1359742-G	rs1359742	7e-09	8.154901959985743	1.2048193	[1.12-1.28]	chronic lymphocytic leukemia	GCST003468	Leukemia	Leukemia	0.40774509799928715	1
+Lung cancer	chr9	22160088	rs72658409-?	rs72658409	1e-10	10.0	1.2987013	[1.19-1.39]	lung carcinoma	GCST003325	Lung Cancer	Lung Cancer	0.5	1
+Breast cancer	chr9	21964884	rs3057314-C	rs3057314	7e-25	24.154901959985743	0.0695	[0.056-0.083] unit increase	breast carcinoma	GCST004988	Breast Cancer	Breast Cancer	1.0	1
+Breast cancer	chr9	22062135	rs1011970-T	rs1011970	1e-15	15.0	1.07	[1.04-1.09] (Oncoarray)	breast carcinoma	GCST004988	Breast Cancer	Breast Cancer	0.75	1
+Breast cancer	chr9	22067594	rs10811650-G	rs10811650	2e-13	12.698970004336019	0.0461	[0.034-0.058] unit decrease	breast carcinoma	GCST004988	Breast Cancer	Breast Cancer	0.6349485002168009	1
+Non-glioblastoma glioma	chr9	22032153	rs634537-G	rs634537	1e-15	15.0	1.21	1.16-1.27	central nervous system cancer, glioma	GCST004348	Glioma	Glioma	0.75	1
+Glioma	chr9	22032153	rs634537-G	rs634537	1e-45	45.0	1.3	1.25-1.34	central nervous system cancer, glioma	GCST004347	Glioma	Glioma	1.0	1
+Glioblastoma	chr9	22032153	rs634537-G	rs634537	7e-45	44.15490195998574	1.37	1.31-1.43	central nervous system cancer, glioblastoma multiforme	GCST004349	Glioma	Glioma	1.0	1
+Lung adenocarcinoma	chr9	21830158	rs885518-G	rs885518	1e-09	9.0	1.1671287	[1.110679289-1.226447176]	lung adenocarcinoma	GCST004744	Lung Cancer	Lung Cancer	0.45	1
+Lung adenocarcinoma	chr9	22052069	rs62560775-G	rs62560775	2e-09	8.698970004336019	1.1804289	[1.117964329-1.246383605]	lung adenocarcinoma	GCST004744	Lung Cancer	Lung Cancer	0.4349485002168009	1
+Colorectal cancer	chr9	22115286	rs944796-T	rs944796	9e-13	12.045757490560675	0.0571	unit increase	colorectal cancer	GCST90435268	Colorectal Cancer	Colorectal Cancer	0.6022878745280338	1
+Colorectal cancer	chr9	22052735	rs6475604-T	rs6475604	3e-08	7.522878745280337	0.0475	unit increase	colorectal cancer	GCST90435268	Colorectal Cancer	Colorectal Cancer	0.37614393726401685	1
+Colorectal cancer	chr9	22092925	rs10811654-G	rs10811654	1e-09	9.0	0.10056386	[0.068-0.133] unit decrease	colorectal cancer	GCST90018588	Colorectal Cancer	Colorectal Cancer	0.45	1
+Colorectal cancer	chr9	22092925	rs10811654-G	rs10811654	4e-09	8.397940008672037	0.9026533	[0.872332719-0.934027684]	colorectal cancer	GCST90013697	Colorectal Cancer	Colorectal Cancer	0.4198970004336019	1
+Melanoma	chr9	21803881	rs871024-C	rs871024	2e-20	19.69897000433602	0.242962	[0.19-0.29] unit increase	melanoma	GCST90103972	Melanoma	Melanoma	0.9849485002168009	1
+Cutaneous melanoma (MTAG)	chr9	21803881	rs871024-C	rs871024	2e-104	103.69897000433602	0.1493	[0.14-0.16] unit increase	cutaneous melanoma	GCST90103971	Melanoma	Melanoma	1.0	1
+Lung cancer	chr9	21763749	rs7850447-?	rs7850447	7e-15	14.154901959985743	0.09	[0.051-0.129] unit increase	lung carcinoma	GCST90134661	Lung Cancer	Lung Cancer	0.7077450979992872	1
+Lung adenocarcinoma	chr9	21775493	rs12348845-A	rs12348845	3e-19	18.522878745280337	0.13	[0.091-0.169] unit increase	lung adenocarcinoma	GCST90134662	Lung Cancer	Lung Cancer	0.9261439372640169	1
+Non-melanoma skin cancer	chr9	22053688	rs10965219-?	rs10965219	8e-23	22.096910013008056	0.898882	[0.88-0.92]	non-melanoma skin carcinoma	GCST90027058	Non-Melanoma Skin Cancer	Non-Melanoma Skin Cancer	1.0	1
+Colorectal cancer	chr9	22092925	rs10811654-?	rs10811654	1e-08	8.0	0.9	[0.87-0.93]	colorectal cancer	GCST90093302	Colorectal Cancer	Colorectal Cancer	0.4	1
+Colorectal cancer	chr9	22110132	rs1412834-T	rs1412834	4e-14	13.397940008672037	1.08	[1.06-1.11]	colorectal cancer	GCST007992	Colorectal Cancer	Colorectal Cancer	0.6698970004336019	1
+Breast cancer or lung cancer (pleiotropy)	chr9	22003224	rs3217992-C	rs3217992	2e-21	20.69897000433602			breast cancer, lung cancer	GCST90270343	Pan-cancer	Pan-cancer	1.0	1
+Colorectal cancer	chr9	22105928	rs7859362-C	rs7859362	1e-17	17.0	0.0553	[0.043-0.068] unit decrease	colorectal cancer	GCST90129505	Colorectal Cancer	Colorectal Cancer	0.85	1
+Prostate cancer	chr9	22041999	rs17694493-G	rs17694493	3e-19	18.522878745280337	1.07	[1.06-1.09]	prostate carcinoma	GCST90274714	Prostate Cancer	Prostate Cancer	0.9261439372640169	1
+Basal cell carcinoma (MTAG)	chr9	22049657	rs10811645-A	rs10811645	2e-116	115.69897000433602			basal cell carcinoma	GCST90137411	Keratinocyte Carcinoma	Keratinocyte Carcinoma	1.0	1
+B-cell lymphoblastic leukemia or rheumatoid arthritis (pleiotropy)	chr9	22053688	rs10965219-?	rs10965219	5e-10	9.301029995663981			B-cell acute lymphoblastic leukemia, rheumatoid arthritis	GCST90428832	Leukemia	Leukemia	0.46505149978319904	1
+B-cell lymphoblastic leukemia or Crohn's disease (pleiotropy)	chr9	22053896	rs17756311-?	rs17756311	8e-10	9.096910013008056			B-cell acute lymphoblastic leukemia, Crohn's disease	GCST90428830	Leukemia	Leukemia	0.4548455006504028	1
+Basal cell carcinoma	chr9	22054691	rs7874604-C	rs7874604	5e-45	44.30102999566398	0.9024		basal cell carcinoma	GCST90328132	Keratinocyte Carcinoma	Keratinocyte Carcinoma	1.0	1
+Basal cell carcinoma	chr9	21941316	rs74903566-A	rs74903566	5e-11	10.301029995663981	0.133832	[0.094-0.174] unit increase	basal cell carcinoma	GCST90328132	Keratinocyte Carcinoma	Keratinocyte Carcinoma	0.5150514997831991	1
+Basal cell carcinoma	chr9	22054691	rs7874604-C	rs7874604	5e-45	44.30102999566398	0.9029		basal cell carcinoma	GCST90328134	Keratinocyte Carcinoma	Keratinocyte Carcinoma	1.0	1
+Basal cell carcinoma	chr9	22069145	rs16905599-A	rs16905599	5e-09	8.301029995663981	0.0774338	[0.052-0.103] unit decrease	basal cell carcinoma	GCST90328132	Keratinocyte Carcinoma	Keratinocyte Carcinoma	0.41505149978319905	1
+Prostate cancer	chr9	22041999	rs17694493-G	rs17694493	6e-21	20.221848749616356	1.07	[1.06-1.09]	prostate carcinoma	GCST90274713	Prostate Cancer	Prostate Cancer	1.0	1
