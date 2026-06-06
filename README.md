@@ -8,6 +8,25 @@ Elena Torlai Triglia\*, Tyler E. Miller\*, Neva C. Durand, et al.
 
 Raw and processed data are available at [GEO GSE309515](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE309515).
 
+### Interactive genome browser
+
+[IGV](https://igv.org/) session files are provided per figure for interactive exploration of the 9p21 locus. Each session bundles the relevant tracks (CTCF and H3K27ac ChIP-seq, ATAC-seq, RCMC loops, SCEPTRE significance tracks, virtual 4C, gene annotations, etc.) and pulls them from public URLs.
+
+| Figure | One-click in browser | Session XML |
+|---|---|---|
+| Fig 5B | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FFigure_5B.json) | [`Figure_5B.xml`](igv_sessions/Figure_5B.xml) |
+| Fig 6B-C | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FFigure_6B-C.json) | [`Figure_6B-C.xml`](igv_sessions/Figure_6B-C.xml) |
+| Fig 6F | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FFigure_6F.json) | [`Figure_6F.xml`](igv_sessions/Figure_6F.xml) |
+| Fig 7A | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FFigure_7A.json) | [`Figure_7A.xml`](igv_sessions/Figure_7A.xml) |
+| Suppl Fig 11 | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_11.json) | [`Supplemental_Figure_11.xml`](igv_sessions/Supplemental_Figure_11.xml) |
+| Suppl Fig 13 | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_13.json) | [`Supplemental_Figure_13.xml`](igv_sessions/Supplemental_Figure_13.xml) |
+| Suppl Fig 14 | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_14.json) | [`Supplemental_Figure_14.xml`](igv_sessions/Supplemental_Figure_14.xml) |
+| Suppl Fig 15A | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_15A.json) | [`Supplemental_Figure_15A.xml`](igv_sessions/Supplemental_Figure_15A.xml) |
+| Suppl Fig 15B | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_15B.json) | [`Supplemental_Figure_15B.xml`](igv_sessions/Supplemental_Figure_15B.xml) |
+| Suppl Fig 18 | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_18.json) | [`Supplemental_Figure_18.xml`](igv_sessions/Supplemental_Figure_18.xml) |
+
+The XMLs in the table can also be opened directly in [IGV desktop](https://igv.org/). The "Open in IGV web app" links use a native IGV.js JSON session (also under [`igv_sessions/`](igv_sessions/)) since the web app's XML translation layer doesn't support every IGV desktop feature. Both formats reference the same publicly-hosted tracks at `gs://broad-p16-calico/`.
+
 ## Custom GTFs
 
 To distinguish p14ARF and p16INK4A in single-cell expression data, we generated three custom GTF files based on [GENCODE v34 (GRCh38.p13)](https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_34/gencode.v34.annotation.gtf.gz). See the Methods section of the paper for full details on how each GTF was constructed.
@@ -29,6 +48,7 @@ To distinguish p14ARF and p16INK4A in single-cell expression data, we generated 
 | Fig 5 | RCMC and epigenomic landscape | [`microC_juicer_commands.sh`](#region-capture-micro-c-and-epigenomic-landscape-fig-5-7), `plotGardener_Wi38_*.R`, `Plotgardener_PDL.R` |
 | Fig 6 | CRISPRa screen and validation | [`screen_sceptre_original.R`](#crispra-screen-fig-6), `screen_processing.R`, `write_bedGraph.R`, `senmayo_safeharbor_E1.R` |
 | Fig 7 | CRE characterization, virtual 4C, tissue accessibility | [`extract_virtual_4C.py`](#region-capture-micro-c-and-epigenomic-landscape-fig-5-7), `Plotgardener_PDL.R` |
+
 
 ## Analysis
 
@@ -95,25 +115,6 @@ The CRISPRa screen used [SCEPTRE](https://katsevich-lab.github.io/sceptre/index.
 
 - [replSen_Salmon_mapping_merge_aggregateTPM_atGeneLevel_cellcycle_senmayo.R](replSen_Salmon_mapping_merge_aggregateTPM_atGeneLevel_cellcycle_senmayo.R) — Salmon quantification of total RNA-seq across WI-38 PDLs, aggregation to gene-level TPMs, cell cycle and SenMayo scoring
 
-### Interactive genome browser
-
-[IGV](https://igv.org/) session files are provided per figure for interactive exploration of the 9p21 locus. Each session bundles the relevant tracks (CTCF and H3K27ac ChIP-seq, ATAC-seq, RCMC loops, SCEPTRE significance tracks, virtual 4C, gene annotations, etc.) and pulls them from public URLs.
-
-| Figure | One-click in browser | Session XML |
-|---|---|---|
-| Fig 5B | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FFigure_5B.json) | [`Figure_5B.xml`](igv_sessions/Figure_5B.xml) |
-| Fig 6B-C | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FFigure_6B-C.json) | [`Figure_6B-C.xml`](igv_sessions/Figure_6B-C.xml) |
-| Fig 6F | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FFigure_6F.json) | [`Figure_6F.xml`](igv_sessions/Figure_6F.xml) |
-| Fig 7A | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FFigure_7A.json) | [`Figure_7A.xml`](igv_sessions/Figure_7A.xml) |
-| Suppl Fig 11 | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_11.json) | [`Supplemental_Figure_11.xml`](igv_sessions/Supplemental_Figure_11.xml) |
-| Suppl Fig 13 | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_13.json) | [`Supplemental_Figure_13.xml`](igv_sessions/Supplemental_Figure_13.xml) |
-| Suppl Fig 14 | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_14.json) | [`Supplemental_Figure_14.xml`](igv_sessions/Supplemental_Figure_14.xml) |
-| Suppl Fig 15A | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_15A.json) | [`Supplemental_Figure_15A.xml`](igv_sessions/Supplemental_Figure_15A.xml) |
-| Suppl Fig 15B | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_15B.json) | [`Supplemental_Figure_15B.xml`](igv_sessions/Supplemental_Figure_15B.xml) |
-| Suppl Fig 18 | [Open in IGV web app](https://igv.org/app/?sessionURL=https%3A%2F%2Fstorage.googleapis.com%2Fbroad-p16-calico%2Figv_sessions%2FSupplemental_Figure_18.json) | [`Supplemental_Figure_18.xml`](igv_sessions/Supplemental_Figure_18.xml) |
-
-The XMLs in the table can also be opened directly in [IGV desktop](https://igv.org/). The "Open in IGV web app" links use a native IGV.js JSON session (also under [`igv_sessions/`](igv_sessions/)) since the web app's XML translation layer doesn't support every IGV desktop feature. Both formats reference the same publicly-hosted tracks at `gs://broad-p16-calico/`.
-
 ## Reproducing from GEO
 
 All raw and processed data live at [GEO GSE309515](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE309515) as five sub-series (microC, dial-up scRNA-seq, CRISPRa screen, ChIP-seq, total RNA-seq). Scripts in this repo expect GEO file names as-is. Below is what each script reads.
@@ -136,6 +137,14 @@ source("screen_sceptre_original.R")  # or screen_sceptre_new_version.R
 source("write_bedGraph.R")
 ```
 
+### GWAS/ eQTL/ LD plot (Fig 5, 7)
+
+Code and pre-processed data to reproduce the eQTL plot and eQTL/ GWAS/ LD plot in Fig 5 and 7 is in `GWAS/` . 
+
+### Accessibility across adult cell types (Fig 7)
+
+Code and pre-processed data to reproduce the Accessibility heatmap for the 9p21 regulatory elements in adult cell types from Zhang\*, Hocker\* et al is in `EnhancerAtlas/` 
+
 ### Total RNA-seq
 
 Download `PDL{21,33,41,48,535,54,57}_quant.sf` into `geo_totalRNA/`. Also requires `mart_export_GRCh38.p13.txt` (download from Ensembl BioMart with columns "Gene stable ID" + "Gene name") next to the script. Then run `replSen_Salmon_mapping_merge_aggregateTPM_atGeneLevel_cellcycle_senmayo.R`.
@@ -152,11 +161,10 @@ The following analyses are described in Methods. Refer to the Methods section fo
 - ChIP-seq processing (ENCODE uniform pipeline; HOMER peak calling)
 - ChromBPNet 0.1.7 attribution scores + DeepLIFT + TOMTOM motif annotation
 - qRT-PCR Z-score / fold-change combination across replicates
-- sci-ATAC-seq cCRE × cell type heatmap (Fig 7E)
 
 ## Software
 
-Key tools and versions used (see Methods for complete details):
+Key tools and versions used (see Paper/ Methods for more details):
 
 - [**STAR**](https://github.com/alexdobin/STAR) 2.7.10b — single-cell alignment (via [Cumulus](https://cumulus.readthedocs.io/) wrapper)
 - [**SCEPTRE**](https://katsevich-lab.github.io/sceptre/index.html) — CRISPRa screen analysis (High MOI)
