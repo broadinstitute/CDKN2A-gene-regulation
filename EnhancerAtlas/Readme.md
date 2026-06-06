@@ -2,7 +2,11 @@
 
 Code and data for the heatmap of accessibility of the 9p21 Promoters/ CRE regions across adult cell types from the Human Enhancer Atlas from Zhang*, Hocker* et al (https://decoder-genetics.wustl.edu/catlasv1/catlas_humanenhancer/#!/)
 
+Data needed to plot is in `data/`
 
+Code is `Fig7D_heatmap_code.R`
+
+Heatmap generated is `7D_CRE_heatmap.pdf`
 
 ## 
 SessionInfo for R session
