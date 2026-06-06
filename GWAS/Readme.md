@@ -1,4 +1,4 @@
-# GWAS / eQTL / LD analysis at 9p21 (Fig 7C)
+# GWAS / eQTL / LD analysis at 9p21 (Fig 5, 7C)
 
 Code and condensed reference figure for the locus-summary panel showing fine-mapped GWAS variants, eQTLs, LD blocks, and conservation across the 9p21 region.
 
