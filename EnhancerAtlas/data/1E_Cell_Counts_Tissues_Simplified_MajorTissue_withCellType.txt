@@ -1,0 +1,112 @@
+Cell_ID	Cell_ID2	major_tissue	fraction	mostly_one	tissue_label	Label_Fig1E
+A Cardiomyocyte	A Cardiomyocyte	Cardiovasc	100	TRUE	Cardiovasc	Myocyte
+Acinar	Acinar	Pancreas	99.78949925	TRUE	Pancreas	Other_Epith
+Adipocyte	Adipocyte	AdipOm	73.70233702	TRUE	AdipOm	Stromal
+Airway Goblet	Airway Goblet	GI	100	TRUE	GI	Other_Epith
+Alpha 1	Alpha 1	Pancreas	100	TRUE	Pancreas	Islet
+Alpha 2	Alpha 2	Pancreas	100	TRUE	Pancreas	Islet
+Alveolar Cap Endo	Alveolar Cap Endo	Lung	99.18462434	TRUE	Lung	Endoth
+Alveolar Type 1	Alveolar Type 1	Lung	99.96402878	TRUE	Lung	Other_Epith
+Alveolar Type 2	Alveolar Type 2	Lung	99.98074331	TRUE	Lung	Other_Epith
+Alveolar Type 2/Immune	Alveolar Type 2 (Immune)	Lung	99.30475087	TRUE	Lung	Other_Epith
+Astrocyte 1	Astrocyte 1	Brain	99.88439306	TRUE	Brain	BrainGlia
+Astrocyte 2	Astrocyte 2	Brain	99.03846154	TRUE	Brain	BrainGlia
+BBB Endothelial	BBB Endothelial	Brain	83.77192982	TRUE	Brain	Endoth
+Beta 1	Beta 1	Pancreas	100	TRUE	Pancreas	Islet
+Beta 2	Beta 2	Pancreas	100	TRUE	Pancreas	Islet
+Cardiac Fibroblast	Cardiac Fibroblast	Cardiovasc	98.92466622	TRUE	Cardiovasc	Stromal
+Cardiac Pericyte 1	Cardiac Pericyte 1	Cardiovasc	99.88377499	TRUE	Cardiovasc	Mural
+Cardiac Pericyte 2	Cardiac Pericyte 2	Cardiovasc	93.50649351	TRUE	Cardiovasc	Mural
+Cardiac Pericyte 3	Cardiac Pericyte 3	Cardiovasc	87.22826087	TRUE	Cardiovasc	Mural
+Cardiac Pericyte 4	Cardiac Pericyte 4	Cardiovasc	95.01557632	TRUE	Cardiovasc	Mural
+Chief	Chief	GI	99.86044889	TRUE	GI	Other_Epith
+Cilliated	Cilliated	Lung	100	TRUE	Lung	Other_Epith
+Club	Club	Lung	99.57686883	TRUE	Lung	Other_Epith
+Colon Epithelial 1	Colon Epithelial 1	GI	100	TRUE	GI	GI_Epith
+Colon Epithelial 2	Colon Epithelial 2	GI	100	TRUE	GI	GI_Epith
+Colon Epithelial 3	Colon Epithelial 3	GI	100	TRUE	GI	GI_Epith
+Colon Goblet	Colon Goblet	GI	100	TRUE	GI	GI_Epith
+Cortical Epithelial	Cortical Epithelial	Adrenal	100	TRUE	Adrenal	AdrCor
+Delta/Gamma	Delta+Gamma	Pancreas	99.21813917	TRUE	Pancreas	Islet
+Ductal	Ductal	Pancreas	97.61042723	TRUE	Pancreas	Other_Epith
+Endocardial	Endocardial	Cardiovasc	99.42196532	TRUE	Cardiovasc	Endoth
+Endothelial Exocrine	Endothelial Exocrine	Adrenal	64.67391304	FALSE	Multiple	Endoth
+Endothelial General 1	Endothelial General 1	Cardiovasc	25.82996626	FALSE	Multiple	Endoth
+Endothelial General 2	Endothelial General 2	Cardiovasc	49.45255474	FALSE	Multiple	Endoth
+Endothelial General 3	Endothelial General 3	Pancreas	49.11180773	FALSE	Multiple	Endoth
+Endothelial Myocardial	Endothelial Myocardial	Cardiovasc	96.5729746	TRUE	Cardiovasc	Endoth
+Enteric Neuron	Enteric Neuron	Brain	74.50980392	TRUE	Brain	BrainGlia
+Enterochromaffin	Enterochromaffin	GI	100	TRUE	GI	GI_Epith
+Enterocyte	Enterocyte	GI	99.91361224	TRUE	GI	GI_Epith
+Esophageal Epithelial	Esophageal Epithelial	GI	99.63599475	TRUE	GI	Other_Epith
+Fasciculata	Fasciculata	Adrenal	100	TRUE	Adrenal	AdrCor
+Fibro Epithelial	Fibro Epithelial	Skin	88.7294511	TRUE	Skin	Stromal
+Fibro General	Fibro General	GI	54.07051525	FALSE	Multiple	Stromal
+Fibro GI	Fibro GI	GI	99.73190349	TRUE	GI	Stromal
+Fibro Liver Adrenal	Fibro Liver Adrenal	Liver	54.58392102	FALSE	Multiple	Mural
+Fibro Muscle	Fibro Muscle	SkMuscl	98.81628788	TRUE	SkMuscl	Stromal
+Fibro Nerve	Fibro Nerve	Nerve	84.16767189	TRUE	Nerve	Stromal
+Follicular	Follicular	Thyroid	99.99210921	TRUE	Thyroid	Other_Epith
+Foveolar	Foveolar	GI	99.34065934	TRUE	GI	Other_Epith
+GABA 1	GABA 1	Brain	99.87269255	TRUE	Brain	BrainNeur
+GABA 2	GABA 2	Brain	100	TRUE	Brain	BrainNeur
+Gastric Neuroendocrine	Gastric Neuroendocrine	GI	98.12981298	TRUE	GI	Other_Epith
+Glomerulosa	Glomerulosa	Adrenal	100	TRUE	Adrenal	AdrCor
+Glutamatergic 1	Glutamatergic 1	Brain	100	TRUE	Brain	BrainNeur
+Glutamatergic 2	Glutamatergic 2	Brain	100	TRUE	Brain	BrainNeur
+Hepatocyte	Hepatocyte	Liver	99.86018875	TRUE	Liver	Other_Epith
+Keratinocyte 1	Keratinocyte 1	Skin	97.7833674	TRUE	Skin	Other_Epith
+Keratinocyte 2	Keratinocyte 2	Skin	99.81751825	TRUE	Skin	Other_Epith
+Luteal	Luteal	FemRepr	96.61313404	TRUE	FemRepr	Stromal
+Lymphatic	Lymphatic	GI	49.98566103	FALSE	Multiple	Endoth
+Macrophage Gen/Alv	Macrophage Gen or Alv	Lung	84.31011386	TRUE	Lung	ImmuneMyelo
+Macrophage General	Macrophage General	Cardiovasc	39.81248002	FALSE	Multiple	ImmuneMyelo
+Mammary Basal Epi	Mammary Basal Epi	Breast	97.6626826	TRUE	Breast	Other_Epith
+Mammary Epithelial	Mammary Epithelial	Breast	99.72826087	TRUE	Breast	Other_Epith
+Mammary Luminal Epi 1	Mammary Luminal Epi 1	Breast	99.92167102	TRUE	Breast	Other_Epith
+Mammary Luminal Epi 2	Mammary Luminal Epi 2	Breast	86.0380117	TRUE	Breast	Other_Epith
+Mast	Mast	GI	70.05247376	TRUE	GI	ImmuneLymp
+Melanocyte	Melanocyte	Skin	99.76905312	TRUE	Skin	Stromal
+Memory B	Memory B	GI	65.88946459	FALSE	Multiple	ImmuneLymp
+Mesothelial	Mesothelial	AdipOm	61.73349057	FALSE	Multiple	Stromal
+Microglia	Microglia	Brain	99.85744833	TRUE	Brain	ImmuneMyelo
+Myoepithelial	Myoepithelial	Skin	98.83333333	TRUE	Skin	Other_Epith
+Naive T	Naive T	GI	68.58864028	FALSE	Multiple	ImmuneLymp
+Natural Killer T	Natural Killer T	Lung	54.18632075	FALSE	Multiple	ImmuneLymp
+Nerve Stromal	Nerve Stromal	Nerve	93.03423849	TRUE	Nerve	Stromal
+Oligo Precursor	Oligo Precursor	Brain	99.73208305	TRUE	Brain	BrainGlia
+Oligodendrocyte	Oligodendrocyte	Brain	99.84787018	TRUE	Brain	BrainGlia
+Paneth	Paneth	GI	100	TRUE	GI	GI_Epith
+Parietal	Parietal	GI	100	TRUE	GI	Other_Epith
+Pericyte General 1	Pericyte General 1	GI	20.17668852	FALSE	Multiple	Stromal
+Pericyte General 2	Pericyte General 2	GI	41.47896303	FALSE	Multiple	Stromal
+Pericyte General 3	Pericyte General 3	GI	37.04177323	FALSE	Multiple	Mural
+Pericyte General 4	Pericyte General 4	GI	32.7080891	FALSE	Multiple	Mural
+Pericyte Muscularis	Pericyte Muscularis	GI	82.25806452	TRUE	GI	Mural
+Plasma B	Plasma B	GI	92.30080573	TRUE	GI	ImmuneLymp
+Satellite	Satellite	SkMuscl	99.76958525	TRUE	SkMuscl	Stromal
+Schwann General	Schwann General	GI	45.37832523	FALSE	Multiple	Stromal
+SI Goblet	SI Goblet	GI	100	TRUE	GI	GI_Epith
+Skin Basal Epidermal	Skin Basal Epidermal	Skin	98.17351598	TRUE	Skin	Other_Epith
+Skin Eccrine Epidermal	Skin Eccrine Epidermal	Skin	97.68041237	TRUE	Skin	Other_Epith
+Skin Granular Epidermal	Skin Granular Epidermal	Skin	98.58199753	TRUE	Skin	Other_Epith
+Sm Ms Colon 1	Sm Ms Colon 1	GI	99.77653631	TRUE	GI	SmMusc
+Sm Ms Colon 2	Sm Ms Colon 2	GI	99.64675658	TRUE	GI	SmMusc
+Sm Ms GE junction	Sm Ms GE junction	GI	99.10170965	TRUE	GI	SmMusc
+Sm Ms General	Sm Ms General	GI	34.95838288	FALSE	Multiple	Stromal
+Sm Ms GI	Sm Ms GI	GI	100	TRUE	GI	SmMusc
+Sm Ms Mucosal	Sm Ms Mucosal	GI	97.30337079	TRUE	GI	SmMusc
+Sm Ms Muscularis 1	Sm Ms Muscularis 1	GI	99.9000999	TRUE	GI	SmMusc
+Sm Ms Muscularis 2	Sm Ms Muscularis 2	GI	99.75358423	TRUE	GI	SmMusc
+Sm Ms Muscularis 3	Sm Ms Muscularis 3	GI	93.91941392	TRUE	GI	Stromal
+Sm Ms Uterine	Sm Ms Uterine	FemRepr	99.39828743	TRUE	FemRepr	Stromal
+Sm Ms Vaginal	Sm Ms Vaginal	FemRepr	96.15384615	TRUE	FemRepr	SmMusc
+T Lymphocyte 1 (CD8+)	T Lymphocyte 1 (CD8+)	GI	53.89036002	FALSE	Multiple	ImmuneLymp
+T lymphocyte 2 (CD4+)	T lymphocyte 2 (CD4+)	GI	91.02947458	TRUE	GI	ImmuneLymp
+Transitional Cortical	Transitional Cortical	Adrenal	100	TRUE	Adrenal	AdrCor
+Tuft	Tuft	GI	100	TRUE	GI	GI_Epith
+Type I Skeletal Myocyte	Type I Skeletal Myocyte	SkMuscl	99.73255903	TRUE	SkMuscl	Myocyte
+Type II Skeletal Myocyte	Type II Skeletal Myocyte	SkMuscl	99.98099582	TRUE	SkMuscl	Myocyte
+V Cardiomyocyte	V Cardiomyocyte	Cardiovasc	100	TRUE	Cardiovasc	Myocyte
+Vasc Sm Muscle 1	Vasc Sm Muscle 1	Cardiovasc	99.48893275	TRUE	Cardiovasc	Stromal
+Vasc Sm Muscle 2	Vasc Sm Muscle 2	Cardiovasc	94.515625	TRUE	Cardiovasc	Stromal
