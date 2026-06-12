@@ -115,10 +115,6 @@ The CRISPRa screen used [SCEPTRE](https://katsevich-lab.github.io/sceptre/index.
 
 - [replSen_Salmon_mapping_merge_aggregateTPM_atGeneLevel_cellcycle_senmayo.R](replSen_Salmon_mapping_merge_aggregateTPM_atGeneLevel_cellcycle_senmayo.R) — Salmon quantification of total RNA-seq across WI-38 PDLs, aggregation to gene-level TPMs, cell cycle and SenMayo scoring
 
-## Reproducing from GEO
-
-All raw and processed data live at [GEO GSE309515](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE309515) as five sub-series (microC, dial-up scRNA-seq, CRISPRa screen, ChIP-seq, total RNA-seq). Scripts in this repo expect GEO file names as-is. Below is what each script reads.
-
 ### Region Capture Micro-C (Fig 5, 7)
 
 Stage these processed files in the repo root (or symlink them):
@@ -136,6 +132,9 @@ source("screen_processing.R")        # writes data/screen.rna.rds
 source("screen_sceptre_original.R")  # or screen_sceptre_new_version.R
 source("write_bedGraph.R")
 ```
+### ChromBPnet models (Fig 6)
+
+Models and attribution scores as in Fig 6E-F re in `chrombpnet/` . 
 
 ### GWAS/ eQTL/ LD plot (Fig 5, 7)
 
