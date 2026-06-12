@@ -1,0 +1,15 @@
+{
+    "cmd": "contribs_bw",
+    "model_h5": "chrombpnet_PDL50_merged_alt/models/chrombpnet_nobias.h5",
+    "regions": "target_regions.validated.tidy2.bed",
+    "genome": "hg38.fa",
+    "chrom_sizes": "hg38.chrom.sizes",
+    "output_prefix": "chrombpnet_PDL50_contributions/target_regions.validated.tidy2_contributions",
+    "profile_or_counts": [
+        "counts",
+        "profile"
+    ],
+    "output_prefix_stats": null,
+    "tqdm": 1,
+    "debug_chr": null
+}
