@@ -105,7 +105,7 @@ The CRISPRa screen used [SCEPTRE](https://katsevich-lab.github.io/sceptre/index.
 - [screen_alignment.sh](screen_alignment.sh) — STAR solo alignment calls for screen mRNA and dial-up
 - [screen_processing.R](screen_processing.R) — creates the Seurat object from mRNA and CROP-seq alignment output
 - [screen_sceptre_original.R](screen_sceptre_original.R) — runs SCEPTRE in target or guide mode (switch marked in code). Uses [data/gRNAs_targets.tsv](data/gRNAs_targets.tsv) for target mode. Also outputs per-gene bedGraph tracks
-- [screen_sceptre_new_version.R](screen_sceptre_new_version.R) — newer SCEPTRE version
+- [screen_sceptre_new_version.R](screen_sceptre_new_version.R) — newer SCEPTRE version; uses the **mixture** gRNA-assignment method, which produced the SCEPTRE tracks shown in all figures (a thresholding run was done only as a comparison and is not used)
 - [write_bedGraph.R](write_bedGraph.R) — generates per-gene bedGraph tracks from SCEPTRE results for IGV visualization
 - [screen_plotting_cells_guides.R](screen_plotting_cells_guides.R), [screen_plotting_promoter_dialup.R](screen_plotting_promoter_dialup.R) — exploratory screen plots
 - [combine_max_p_value.py](combine_max_p_value.py) — combines p-values across targets

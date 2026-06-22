@@ -6,7 +6,7 @@ library(Seurat)
 library(sceptre)
 library(ggpubr)
 
-outname <- "sceptre_guides_new_version_threshold"
+outname <- "sceptre_guides_new_version_mixture_corrected"
 
 # Load your Seurat object
 screen.rna <- readRDS("data/screen.rna.rds")
@@ -86,24 +86,31 @@ sceptre_object <- set_analysis_parameters(
 )
 
 # Assign gRNAs
-# Option 1: Use mixture method (recommended for high-MOI, accounts for background)
-#sceptre_object <- assign_grnas(
-#  sceptre_object = sceptre_object,
-#  method = "mixture",
-#  parallel = TRUE
-#)
-
-# Option 2: Use thresholding method 
+# Use mixture method (recommended for high-MOI, accounts for background).
+# This is the assignment method used for all figures. A thresholding run
+# (threshold = 10) was performed only as a comparison and is not used.
 sceptre_object <- assign_grnas(
-   sceptre_object = sceptre_object,
-   method = "thresholding",
-   threshold = 10,
-   parallel = TRUE
- )
+  sceptre_object = sceptre_object,
+  method = "mixture",
+  parallel = TRUE
+)
 
 # Plot gRNA assignments
 plot(sceptre_object)
 ggsave(paste0(outname, "_grna_assignments.pdf"), width = 10, height = 8)
+
+# Run QC
+# response_n_umis_range and response_n_nonzero_range are quantile ranges (0-1)
+sceptre_object <- run_qc(
+  sceptre_object = sceptre_object,
+  p_mito_threshold = 0.2,
+  response_n_umis_range = c(0.01, 0.99),
+  response_n_nonzero_range = c(0.01, 0.99)
+)
+
+# Plot QC results
+plot(sceptre_object)
+ggsave(paste0(outname, "_qc.pdf"), width = 10, height = 8)
 
 # Run calibration check
 sceptre_object <- run_calibration_check(
