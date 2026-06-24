@@ -34,7 +34,7 @@
     },
     {
       "name": "Gene track - modified",
-      "url": "https://storage.googleapis.com/broad-p16-calico/refGene_CDKN2AvB.txt.gz",
+      "url": "https://storage.googleapis.com/broad-p16-calico/igv_tracks/refGene_CDKN2AvB.txt.gz",
       "format": "refgene",
       "height": 100,
       "displayMode": "EXPANDED"
